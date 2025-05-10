@@ -65,7 +65,6 @@ header {
 .search-box input {
     flex: 1;
     padding: 10px 15px;
-    border-radius: 50px 0 0 50px;
     border: none;
     outline: none;
     font-size: 16px;
@@ -135,7 +134,7 @@ header {
     background: rgb(241, 238, 238);
     padding: 20px;
     width: 400px;
-    height: 220px;
+    height: 200px;
     border-radius: 8px;
     box-shadow: 5px 5px 8px black;
     position: relative;
@@ -149,47 +148,47 @@ header {
     cursor: pointer;
 }
 /*===== footer ======*/
-.footer {
-background-color: #2d2d2d;
-color: #eee;
-padding: 40px 20px;
-font-family: sans-serif;
-font-size: 14px;
-}
+  .footer {
+    background-color: #2d2d2d;
+    color: #eee;
+    padding: 40px 20px;
+    font-family: sans-serif;
+    font-size: 14px;
+  }
 
-.footer-container {
-width: 100%;
-margin: auto;
-display: flex;
-flex-wrap: wrap;
-justify-content: space-around;
-gap: 30px;
-}
+  .footer-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+  }
 
-.footer-column {
-flex: 1 1 200px;
-min-width: 200px;
-}
+  .footer-column {
+    flex: 1 1 200px;
+    min-width: 200px;
+  }
 
-.footer-column h3 {
-font-size: 16px;
-margin-bottom: 10px;
-color: #fff;
-}
+  .footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
 
-.footer-column p,
-.footer-column a,
-.footer-column li {
-color: #ccc;
-text-decoration: none;
-list-style: none;
-margin-bottom: 8px;
-display: block;
-}
+  .footer-column p,
+  .footer-column a,
+  .footer-column li {
+    color: #ccc;
+    text-decoration: none;
+    list-style: none;
+    margin-bottom: 8px;
+    display: block;
+  }
 
-.footer-column a:hover {
-color: #fff;
-}
+  .footer-column a:hover {
+    color: #fff;
+  }
 
   .footer-bottom {
     text-align: center;
@@ -410,4 +409,49 @@ body {
 
 .form-grid button:hover {
   background-color: #146c43;
+}
+/*==========detail============*/
+.book-detail .book-top {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.book-detail .book-info {
+  flex: 1;
+}
+
+
+
+.price {
+  font-size: 22px;
+  color: red;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.detail-buttons {
+  margin-top: 20px;
+}
+
+.detail-buttons button {
+  padding: 6px 14px;
+  margin-right: 10px;
+  border: 1px solid #aaa;
+  background: #f5f5f5;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.book-description {
+  margin: 20px 0 40px;
+  line-height: 1.6;
+}
+
+.section-title {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
 }
