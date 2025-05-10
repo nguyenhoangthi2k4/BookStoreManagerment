@@ -22,9 +22,9 @@
 </head>
 <body>
     <header>
-        <?php include "page/header.php"; ?>
+        <?php include "page/header.php"; ?>        
     </header>
-    
+
     <main>
         <?php include "page/main_manager.php" ?>
     </main>

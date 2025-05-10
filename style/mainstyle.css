@@ -90,11 +90,6 @@
   background-color: #1e7e34;
 }
 /*===== main manager ======*/
-body {
-  background-color: #f4f6f9;
-  font-family: 'Segoe UI', sans-serif;
-}
-
 .layout.manager-layout {
   display: flex;
   gap: 30px;
@@ -247,8 +242,6 @@ body {
 .book-detail .book-info {
   flex: 1;
 }
-
-
 
 .price {
   font-size: 22px;
