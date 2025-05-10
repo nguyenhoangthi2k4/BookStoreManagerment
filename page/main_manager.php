@@ -1,4 +1,58 @@
 <div class="layout manager-layout">
+    <!-- Cột trái -->
+    <div class="left">
+        <aside class="menu">            
+            <ul class="list-unstyled">
+                <li class="mb-1">
+                    <button class="btn btn-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                    Sản phẩm
+                    </button>
+                    <div class="collapse show" id="home-collapse">
+                        <ul class="btn-toggle-nav list-unstyled">
+                            <li><a href="admin.php?do=add_products" class="link-dark rounded">Nhập sách</a></li>
+                            <li><a href="#" class="link-dark rounded">Kho sách</a></li>
+                            <li><a href="#" class="link-dark rounded">Cập nhật khuyến mãi</a></li>
+                            <li><a href="#" class="link-dark rounded">Nhà cung cấp</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                    Đơn đặt hàng
+                    </button>
+                    <div class="collapse" id="dashboard-collapse">
+                        <ul class="btn-toggle-nav list-unstyled">
+                            <li><a href="#" class="link-dark rounded">Đơn hàng</a></li>
+                            <li><a href="#" class="link-dark rounded">Đơn đã giao</a></li>
+                            <li><a href="#" class="link-dark rounded">Tổng đơn hàng</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                    Thông báo
+                    </button>
+                    <div class="collapse" id="orders-collapse">
+                        <ul class="btn-toggle-nav list-unstyled">
+                            <li><a href="#" class="link-dark rounded">Phản hồi của khách</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+                    Tài khoản
+                    </button>
+                    <div class="collapse" id="account-collapse">
+                        <ul class="btn-toggle-nav list-unstyled">
+                            <li><a href="#" class="link-dark rounded">Thông tin tài khoản của người dùng</a></li>
+                            <li><a href="#" class="link-dark rounded">Thông tin cá nhân</a></li>
+                            <li><a href="index.php?do=logout" class="link-dark rounded">Thoát tài khoản</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+    </div>
   <!-- Cột giữa -->
     <div class="center">
         <h2>📘 Trang quản lý</h2>

@@ -24,10 +24,9 @@
     <header>
         <?php include "page/header.php"; ?>
     </header>
-    <nav>
-        
+    
     <main>
-        <?php include "page/backup.php" ?>
+        <?php include "page/main_manager.php" ?>
     </main>
 
     <footer class="footer">

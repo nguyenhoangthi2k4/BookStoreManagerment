@@ -101,11 +101,36 @@ body {
   padding: 30px;
   max-width: 1280px;
   margin: auto;
+  justify-content: space-between;
   align-items: flex-start;
 }
 
+.left {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  flex: 1 1 25%;
+}
+
+.btn-toggle:hover,
+.btn-toggle:focus {
+    background-color: #79c8e0 !important;
+}
+
+.btn-toggle::before {
+    width: 20px;
+    content: "►";
+}
+
+.btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus {
+    color: #007bff !important;
+}
+
 .center {
-  flex: 1 1 80%;
+  flex: 1 1 55%;
 }
 
 .right {
@@ -174,7 +199,7 @@ body {
   font-weight: bold;
   color: #28a745;
 }
-/*==========4 nút============*/
+/*========== 4 nút============*/
 .form-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
