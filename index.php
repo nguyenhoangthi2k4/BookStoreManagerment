@@ -15,13 +15,17 @@
     <link rel="stylesheet" href="style/mystyle.css">
     <link rel="stylesheet" href="style/mainstyle.css">
 
+     <!-- Import Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <title>Website Bán sách số 1 - VN</title>
 </head>
 <body>
     <header>
         <?php include "page/header.php"; ?>
     </header>
-    <nav></nav>
+    <nav>
+        
     <main>
         <?php include "page/backup.php" ?>
     </main>
@@ -29,5 +33,8 @@
     <footer class="footer">
         <?php include "page/footer.php"; ?>
     </footer>
+
+    <!-- Import Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

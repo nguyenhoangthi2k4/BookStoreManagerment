@@ -1,6 +1,6 @@
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/login.css">
     <link rel="icon" href="../img/icon.png">
     <title>Đăng kí</title>
 </head>

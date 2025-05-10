@@ -18,7 +18,7 @@
     <!-- Cột 3 -->
     <div class="footer-column">
       <h3>Liên hệ</h3>
-      <p>📍 123 Mỹ Bình - Long Xuyên - An Giang</p>
+      <p>⭐ 123 Mỹ Bình - Long Xuyên - An Giang</p>
       <p>📞 0123 456 789</p>
       <p><a href="mailto:example@example.com">✉️ hieusach@gamil.com</a></p>
     </div>

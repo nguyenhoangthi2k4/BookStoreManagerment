@@ -47,7 +47,7 @@ input:hover {
 input:placeholder-shown {
     font-size: 15px;
     font-weight: 500;
-    color: #ffffff;
+    color: #332c2c;
 }
 
 .input-box i {
@@ -71,7 +71,6 @@ input:placeholder-shown {
 
 .submit-button input[type="submit"] {
     width: 50%;
-    height: 25px;
     padding: 5px 5px;
     outline: none;
     border: none;
@@ -126,7 +125,7 @@ input[type="submit"]:hover {
 
 .input-box-register>input:hover {
     border: 2px solid #9ea3fc;
-    box-shadow: 1px 1px 5px #acb0ec;
+    box-shadow: 0px 0px 5px #acb0ec;
 }
 
 .modal-content-register .submit-button {
