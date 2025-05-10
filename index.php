@@ -22,7 +22,7 @@
     </header>
     <nav></nav>
     <main>
-        <?php include "page/main_manager.php" ?>
+        <?php include "page/backup.php" ?>
     </main>
 
     <footer class="footer">
