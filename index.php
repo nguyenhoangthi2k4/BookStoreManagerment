@@ -12,7 +12,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Import CSS -->
-    <link rel="stylesheet" href="style/mystyle.css">
+    <link rel="stylesheet" href="style/mystyle.css">    
 
     <title>Website Bán sách số 1 - VN</title>
 </head>
