@@ -13,6 +13,7 @@
 
     <!-- Import CSS -->
     <link rel="stylesheet" href="style/mystyle.css">
+    <link rel="stylesheet" href="style/mainstyle.css">
 
     <title>Website Bán sách số 1 - VN</title>
 </head>
