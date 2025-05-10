@@ -42,7 +42,7 @@
 
 <script>
 function loadLoginForm() {
-    fetch('login.php')
+    fetch('main/login.php')
         .then(response => response.text())
         .then(data => {
             document.getElementById("loginFormContainer").innerHTML = data;

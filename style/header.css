@@ -45,3 +45,34 @@ input:placeholder-shown {
     right: 0;
     translate: -50% 50%;
 }
+
+.modal-content .register-box a {
+    text-decoration: none;
+    color: #1e16f7;
+}
+
+.modal-content .submit-button
+{
+    display: flex;
+    margin: 15px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-button input[type="submit"] {
+    width: 50%;
+    height: 25px;
+    padding: 5px 0;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #273db7;
+    color: #ffffff;
+    cursor: pointer;
+}
