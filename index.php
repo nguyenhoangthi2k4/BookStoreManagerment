@@ -17,14 +17,16 @@
     <title>Website Bán sách số 1 - VN</title>
 </head>
 <body>
-    <header><?php include "page/header.php"; ?></header>
-    
-    
-
+    <header>
+        <?php include "page/header.php"; ?>
+    </header>
     <nav></nav>
     <main>
         <?php include "page/detail_book.php" ?>
     </main>
-    <footer class="footer"><?php include "page/footer.php"; ?> </footer>
+
+    <footer class="footer">
+        <?php include "page/footer.php"; ?>
+    </footer>
 </body>
 </html>
