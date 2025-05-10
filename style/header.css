@@ -1,9 +1,9 @@
 /* Login.php */
-.modal-content {
+.modal-content-login {
     width: 100%;
 }
 
-.modal-content h1 {
+.modal-content-login h1 {
     width: 100%;
     font-size: 24px;
     text-align: center;
@@ -12,7 +12,7 @@
     color: #ffffff;
 }
 
-.modal-content .input-box {
+.modal-content-login .input-box {
     width: 100%;
     height: 30px;
     margin: 10px 0;
@@ -46,12 +46,12 @@ input:placeholder-shown {
     translate: -50% 50%;
 }
 
-.modal-content .register-box a {
+.modal-content-login .register-box a {
     text-decoration: none;
     color: #1e16f7;
 }
 
-.modal-content .submit-button
+.modal-content-login .submit-button
 {
     display: flex;
     margin: 15px 0;
