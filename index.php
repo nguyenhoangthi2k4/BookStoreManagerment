@@ -22,6 +22,9 @@
     
 
     <nav></nav>
-    <footer><?php include "page/footer.php"; ?> </footer>
+    <main>
+        <?php include "page/main_manager.php" ?>
+    </main>
+    <footer class="footer"><?php include "page/footer.php"; ?> </footer>
 </body>
 </html>

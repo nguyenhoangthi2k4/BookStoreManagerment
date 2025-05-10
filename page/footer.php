@@ -1,5 +1,4 @@
 
-<footer class="footer">
   <div class="footer-container">
     <!-- Cột 1 -->
     <div class="footer-column">
@@ -37,4 +36,3 @@
   <div class="footer-bottom">
     © 2025 Hiệu Sách Online. Đã đăng ký bản quyền.
   </div>
-</footer>
