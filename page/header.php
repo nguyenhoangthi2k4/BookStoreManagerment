@@ -34,7 +34,7 @@
                     echo "<li><a href='logout.php'>Đăng xuất</a></li>";
                 } else {
                     echo "<li><a href='#' onclick='loadLoginForm()'>Đăng nhập</a></li>";
-                    echo "<li><a href='register.php'>Đăng ký</a></li>";
+                    echo "<li><a href='main/register.php'>Đăng ký</a></li>";
                 }
             ?>
         </ul>

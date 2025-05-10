@@ -76,3 +76,41 @@ input[type="submit"]:hover {
     color: #ffffff;
     cursor: pointer;
 }
+
+/* Register.php */
+.modal-content-register {
+    width: 100%;
+}
+
+.modal-content-register h1 {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #8b90ab;
+    color: #a62a2a;
+}
+
+.modal-content-register .input-box {
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+}
+
+.input:hover {
+    border: 2px solid black;
+}
