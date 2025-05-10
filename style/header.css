@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansation:wght@300;400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sansation", sans-serif;
+    font-size: 12pt;
+}
+
+
 /* Login.php */
 .modal-content-login {
     width: 100%;
@@ -62,13 +72,13 @@ input:placeholder-shown {
 .submit-button input[type="submit"] {
     width: 50%;
     height: 25px;
-    padding: 5px 0;
+    padding: 5px 5px;
     outline: none;
     border: none;
-    border-radius: 20px;
+    border-radius: 8px;
     font-size: 15px;
     font-weight: 500;
-    background-color: white;
+    background-color: rgb(21, 158, 243);
 }
 
 input[type="submit"]:hover {
@@ -80,37 +90,50 @@ input[type="submit"]:hover {
 /* Register.php */
 .modal-content-register {
     width: 100%;
+    font-size: 14pt;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fbf5f5;
 }
 
 .modal-content-register h1 {
     width: 100%;
-    font-size: 24px;
+    font-size: 30px;
     text-align: center;
     font-weight: bold;
-    background-color: #8b90ab;
-    color: #a62a2a;
+    color: #060d83;
 }
 
-.modal-content-register .input-box {
-    width: 100%;
+.modal-content-register .input-box-register {
+    width: 500px;
     height: 30px;
-    margin: 10px 0;
+    margin: 30px 0;
     outline: none;
-    border: none;
-    border-radius: 20px;
-    position: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: column;;
 }
 
-.input-box input {
+.input-box-register>input {
     width: 100%;
     height: 100%;
+    padding: 10px;
     outline: none;
-    border: none;
-    border-radius: 8px;
+    border: 1px solid #060d83;
+    border-radius: 2px;
 }
 
-.input:hover {
-    border: 2px solid black;
+.input-box-register>input:hover {
+    border: 2px solid #9ea3fc;
+    box-shadow: 1px 1px 5px #acb0ec;
 }
+
+.modal-content-register .submit-button {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    margin-top: 20px;
+}
+
+
+
