@@ -22,7 +22,7 @@
     </header>
     <nav></nav>
     <main>
-        <?php include "page/detail_book.php" ?>
+        <?php include "page/backup.php" ?>
     </main>
 
     <footer class="footer">

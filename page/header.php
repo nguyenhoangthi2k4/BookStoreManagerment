@@ -13,7 +13,7 @@
 <div class="header-left">
     <img src="img/logo.png" alt="Logo" style="width: 70px; height: 70px;">
     <ul class="menu">
-        <li><a href="home.php">Trang chủ</a></li>
+        <li><a href="index.php">Trang chủ</a></li>
         <li><a href="#">Giới thiệu</a></li>
         <li><a href="#">Tin tức</a></li>
         <li><a href="#">Liên hệ</a></li>          

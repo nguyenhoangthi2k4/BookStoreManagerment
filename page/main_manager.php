@@ -4,12 +4,12 @@
     <h2>📘 Trang quản lý</h2>
 
     <div class="card action-card">
-      <h3>🎯 Các chức năng</h3>
-      <div class="action-buttons">
-        <button>➕ Nhập sách</button>
-        <button>📝 Cập nhật giá</button>
-        <button>🎯 Cập nhật khuyến mãi</button>
-        <button>📦 Sao lưu dữ liệu</button>
+        <h3>🎯 Các chức năng</h3>
+        <div class="action-buttons">
+            <button>➕ Nhập sách</button>
+            <button>📝 Cập nhật giá</button>
+            <button>🎯 Cập nhật khuyến mãi</button>
+            <button>📦 Sao lưu dữ liệu</button>
       </div>
     </div>
 
