@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include_once "config.php";
+    //include_once "config.php";
 ?>
 <!DOCTYPE html>
 <html lang="vn">
@@ -21,6 +21,6 @@
     
 
     <nav></nav>
-    <footer></footer>
+    <footer><?php include "page/footer.php"; ?> </footer>
 </body>
 </html>

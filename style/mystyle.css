@@ -147,3 +147,52 @@ header {
     font-size: 24px;
     cursor: pointer;
 }
+/*===== footer ======*/
+  .footer {
+    background-color: #2d2d2d;
+    color: #eee;
+    padding: 40px 20px;
+    font-family: sans-serif;
+    font-size: 14px;
+  }
+
+  .footer-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .footer-column {
+    flex: 1 1 200px;
+    min-width: 200px;
+  }
+
+  .footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+
+  .footer-column p,
+  .footer-column a,
+  .footer-column li {
+    color: #ccc;
+    text-decoration: none;
+    list-style: none;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .footer-column a:hover {
+    color: #fff;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    color: #aaa;
+    margin-top: 30px;
+    font-size: 13px;
+  }
