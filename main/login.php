@@ -1,4 +1,3 @@
-<div id="loginModal" class="modal">
 <div class="modal-content-login">
     <h1>Login</h1>
     <form action="process_login.php" method="POST">
@@ -7,7 +6,7 @@
             <i class='bx bx-user'></i>
         </div>
         <div class="input-box">
-            <input type="password" name="password" placeholder="Password" required id = "passwordField">
+            <input type="password" name="password" placeholder="Password" required>
             <i class='bx bx-lock' id="togglePassword"></i>
         </div>
         <div class="register-box">
