@@ -1,3 +1,7 @@
+<head>
+    <link rel="stylesheet" href="style/header.css">
+</head>
+
 <!-- Popup login (ẩn ban đầu) -->
 <div id="loginPopup" class="popup-overlay" style="display: none;">
     <div class="popup-content">
