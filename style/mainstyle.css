@@ -367,16 +367,3 @@
   cursor: pointer;
   border-radius: 6px;
 }
-
-.book-description {
-  margin: 20px 0 40px;
-  line-height: 1.6;
-}
-
-.section-title {
-  margin-top: 40px;
-  margin-bottom: 15px;
-  font-size: 18px;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 5px;
-}
