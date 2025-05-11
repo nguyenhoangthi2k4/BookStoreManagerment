@@ -17,6 +17,8 @@
     <!-- Import CSS -->
     <link rel="stylesheet" href="style/mystyle.css">
     <link rel="stylesheet" href="style/mainstyle.css">
+    
+
 
 
     <title>Website Bán sách số 1 - VN</title>
@@ -36,5 +38,13 @@
 
     <!-- Import Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- xử lý xoay -->
+    <script>
+        document.querySelectorAll('.btn-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>

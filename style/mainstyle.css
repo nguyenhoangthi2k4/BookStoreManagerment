@@ -115,9 +115,16 @@
 }
 
 .btn-toggle::before {
+    display: inline-block;
     width: 20px;
     content: "►";
+    transition: transform 0.3s ease;
 }
+
+.btn-toggle.active::before {
+    transform: rotate(90deg);
+}
+
 
 .btn-toggle-nav a:hover,
 .btn-toggle-nav a:focus {
