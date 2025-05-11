@@ -7,7 +7,7 @@
 <body>
     <div class="modal-content-register">
     <h1>Đăng kí tài khoản</h1>
-    <form action="process_register.php" method="POST" class="register-form">
+    <form action="main/process_register.php" method="POST" class="register-form">
         <div class="input-box-register">
             <label for="hoten">Họ tên</label>
             <input type="text" name="name" id="name" placeholder="Họ tên" required>

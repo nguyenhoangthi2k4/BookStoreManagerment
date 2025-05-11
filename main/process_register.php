@@ -22,7 +22,7 @@
 			}
 
 			// Kiểm tra username đã tồn tại
-			$sql = 'SELECT COUNT(*) AS total FROM ACCOUNT WHERE USERNAME = "'.$username.'"';
+			$sql = 'SELECT COUNT(*) AS total FROM ACCOUNT WHERE USERNAME = " '.$username.' " ';
 			$check = executePreparedSingleResult($sql);
 			if ($check && $check['total'] > 0) {
 				header("Location: register.php?error=exists");

@@ -26,16 +26,21 @@
 
     <main>
         <?php 
-            if (isset($_SESSION["username"]) && $_SESSION["quyen"] == 1){
-                include "page/main_manager.php";
-            }  else{
-                if (isset($_GET['id'])) {
-                    include "page/detail_book.php";
-                } else {
-                    include "page/main_user.php";
-                }
-            }
-         ?>
+        $action = isset($_GET['action']) ? $_GET['action'] : '';
+        $id = isset($_GET['id']) ? $_GET['id'] : '';
+
+        if (isset($_SESSION["username"]) && $_SESSION["quyen"] == 1) {
+            // Quản trị viên
+            include "page/main_manager.php";
+        } elseif ($action == 'register') {
+            include "main/register.php";
+        } elseif (!empty($id)) {
+            include "page/detail_book.php";
+        } else {
+            include "page/main_user.php";
+        }
+
+        ?>
     </main>
 
     <footer class="footer">
