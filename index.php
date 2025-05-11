@@ -27,7 +27,7 @@
     </header>
 
     <main>
-        <?php include "page/main_manager.php" ?>
+        <?php include "page/main_user.php" ?>
     </main>
 
     <footer class="footer">
