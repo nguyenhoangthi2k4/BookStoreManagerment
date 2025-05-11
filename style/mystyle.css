@@ -149,7 +149,7 @@ body {
 /* === Banner === */
 .banner {
     margin: 20px auto;
-    width: 1000px;
+    width: 93%;
     border-radius: 20px;
     box-shadow: 5px 10px 12px gray
 }

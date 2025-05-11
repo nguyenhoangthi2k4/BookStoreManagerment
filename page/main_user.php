@@ -1,6 +1,6 @@
 <nav class="nav-title">
     <div class="nav-header">
-        <h2>DANH MỤC EBOOK</h2>
+        <h2>DANH MỤC BOOK</h2>
         <a href="#">Tất cả các loại sách</a>
     </div>
     <div class="nav-list">
@@ -22,14 +22,18 @@
         <h2>📚 Danh sách sách</h2>
         <div class="book-grid">           
             <?php
-                $sql = "SELECT * FROM SACH JOIN THELOAI ON SACH.MATHELOAI = THELOAI.MATHELOAI";
+                $sql = "SELECT * FROM SACH";
                 $result = executeResults($sql);
                 foreach ($result as $item) {
                     echo '<div class="book-box">';
-                    echo '<img src="' . $item['ANHBIA'] . '" alt="' . $item['TENSACH'] . '">';
-                    echo '<h3>' . $item['TENSACH'] . '</h3>';
-                    echo '<p>Giá: ' . number_format($item['GIAGOC'], 0, ',', '.') . 'đ</p>';
-                    echo '<button class="add-to-cart">Thêm vào giỏ</button>';
+                        echo '<div class="book-top">';
+                            echo '<img src="' . $item['ANHBIA'] . '" alt="' . $item['TENSACH'] . '">';
+                            echo '<h3>' . $item['TENSACH'] . '</h3>';
+                        echo '</div>';
+                        echo '<div class="book-bottom">';
+                            echo '<p>Giá: ' . number_format($item['GIAGOC'], 0, ',', '.') . 'đ</p>';
+                            echo '<button class="add-to-cart">Thêm vào giỏ</button>';
+                        echo '</div>';
                     echo '</div>';
                 }
             ?>           
@@ -39,8 +43,7 @@
     <div class="right">
         <h3>🛒 Giỏ hàng</h3>
         <ul>
-            <li>Đắc Nhân Tâm - 1 x 90.000đ</li>
-            <li>Nhà giả kim - 2 x 75.000đ</li>
+            
         </ul>
         <hr />
         <strong>Tổng: 240.000đ</strong>
