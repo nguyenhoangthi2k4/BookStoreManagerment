@@ -1,18 +1,22 @@
 <nav class="nav-title">
-    <h2>DANH MỤC EBOOK</h2>
-    <a href="#">Tất cả các loại sách</a>
-    <ul class="ebook-menu">
-        <li><a href="#"><span>Tiểu thuyết</span></a></li>
-        <li><a href="#"><span>Truyện ngắn</span></a></li>
-        <li><a href="#"><span>Trinh thám</span></a></li>
-        <li><a href="#"><span>Kinh dị</span></a></li>
-        <li><a href="#"><span>Ngôn tình</span></a></li>
-        <li><a href="#"><span>Khoa học</span></a></li>
-        <li><a href="#"><span>Phiêu lưu</span></a></li>
-        <li><a href="#"><span>Lịch sử</span></a></li>
-        <li><a href="#"><span>Tâm lý</span></a></li>
-        <li><a href="#"><span>Văn học</span></a></li>
-    </ul>
+    <div class="nav-header">
+        <h2>DANH MỤC EBOOK</h2>
+        <a href="#">Tất cả các loại sách</a>
+    </div>
+    <div class="nav-list">
+        <ul class="ebook-menu">
+            <li><a href="#"><span>Tiểu thuyết</span></a></li>
+            <li><a href="#"><span>Truyện ngắn</span></a></li>
+            <li><a href="#"><span>Trinh thám</span></a></li>
+            <li><a href="#"><span>Kinh dị</span></a></li>
+            <li><a href="#"><span>Ngôn tình</span></a></li>
+            <li><a href="#"><span>Khoa học</span></a></li>
+            <li><a href="#"><span>Phiêu lưu</span></a></li>
+            <li><a href="#"><span>Lịch sử</span></a></li>
+            <li><a href="#"><span>Tâm lý</span></a></li>
+            <li><a href="#"><span>Văn học</span></a></li>
+        </ul>
+    </div>    
 </nav>
 
 <div class="layout">
