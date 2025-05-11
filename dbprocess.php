@@ -11,7 +11,7 @@
     function executePreparedSingleResult($sql) {
         global $conn;
         $result = mysqli_query($conn, $sql);
-        $row = mysqli_fetch_array($result, 1);
+        $row = mysqli_fetch_array($result);
         return $row;
     }
 
@@ -20,7 +20,7 @@
         global $conn;
         $result = mysqli_query($conn, $sql);
         $data = [];
-        while ($row = mysqli_fetch_array($result, 1)) {
+        while ($row = mysqli_fetch_array($result)) {
             $data[] = $row;
         }
         return $data;

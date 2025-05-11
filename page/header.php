@@ -33,10 +33,10 @@
                     if (isset($_SESSION['username'])) { // phân quyền người dùng
                         if(isset($_SESSION['quyen']) && $_SESSION['quyen'] == 1)
                         {
-                            echo "<li><a href='profile.php'>Admin</a></li>";
+                            echo "<li><a href='main/profile.php'>Admin</a></li>";
                             echo "<li><a href='main/logout.php'>Đăng xuất</a></li>";
                         }else{
-                            echo "<li><a href='profile.php'>Khách hàng</a></li>";
+                            echo "<li><a href='main/profile.php'>Khách hàng</a></li>";
                             echo "<li><a href='main/logout.php'>Đăng xuất</a></li>";
                         }
                     } else {
