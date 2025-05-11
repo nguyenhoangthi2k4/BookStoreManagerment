@@ -10,7 +10,7 @@
             <i class='bx bx-lock' id="togglePassword"></i>
         </div>
         <div class="register-box">
-            <p>Bạn chưa có tài khoản <a href="main/register.php">Đăng ký</a> </p>                
+            <p>Bạn chưa có tài khoản <a href="index.php?action=register">Đăng ký</a> </p>                
         </div>
         <div class="submit-button">
             <input type="submit" value="Đăng nhập">
