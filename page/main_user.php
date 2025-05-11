@@ -27,8 +27,10 @@
                 foreach ($result as $item) {
                     echo '<div class="book-box">';
                         echo '<div class="book-top">';
-                            echo '<img src="' . $item['ANHBIA'] . '" alt="' . $item['TENSACH'] . '">';
-                            echo '<h3>' . $item['TENSACH'] . '</h3>';
+                            echo '<a href="index.php?id=' . $item['MASACH'] . '">';
+                                echo '<img src="' . $item['ANHBIA'] . '" alt="' . $item['TENSACH'] . '">';
+                                echo '<h3>' . $item['TENSACH'] . '</h3>';
+                            echo '</a>';
                         echo '</div>';
                         echo '<div class="book-bottom">';
                             echo '<p>Giá: ' . number_format($item['GIAGOC'], 0, ',', '.') . 'đ</p>';
