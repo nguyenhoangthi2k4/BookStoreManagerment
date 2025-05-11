@@ -30,9 +30,15 @@
         <div class="user">
             <ul class="menu-user">
                 <?php
-                    if (isset($_SESSION['user'])) { // phân quyền người dùng
-                        echo "<li><a href='profile.php'>Thông tin</a></li>";
-                        echo "<li><a href='logout.php'>Đăng xuất</a></li>";
+                    if (isset($_SESSION['username'])) { // phân quyền người dùng
+                        if(isset($_SESSION['quyen']) && $_SESSION['quyen'] == 1)
+                        {
+                            echo "<li><a href='profile.php'>Admin</a></li>";
+                            echo "<li><a href='main/logout.php'>Đăng xuất</a></li>";
+                        }else{
+                            echo "<li><a href='profile.php'>Khách hàng</a></li>";
+                            echo "<li><a href='main/logout.php'>Đăng xuất</a></li>";
+                        }
                     } else {
                         echo "<li><a href='#' onclick='loadLoginForm()'>Đăng nhập</a></li>";
                         echo "<li><a href='main/register.php'>Đăng ký</a></li>";

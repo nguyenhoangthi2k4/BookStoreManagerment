@@ -1,6 +1,6 @@
 <div class="modal-content-login">
     <h1>Login</h1>
-    <form action="process_login.php" method="POST">
+    <form action="main/process_login.php" method="POST">
         <div class="input-box">
             <input type="text" name="username" placeholder="Username" required>
             <i class='bx bx-user'></i>

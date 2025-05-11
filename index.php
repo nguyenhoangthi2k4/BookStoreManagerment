@@ -26,7 +26,13 @@
     </header>
 
     <main>
-        <?php include "page/main_user.php" ?>
+        <?php 
+        if (isset($_SESSION["username"]) && $_SESSION["quyen"] == 1){
+            include "page/main_manager.php";
+        }  else{
+            include "page/main_user.php";
+        }
+         ?>
     </main>
 
     <footer class="footer">
