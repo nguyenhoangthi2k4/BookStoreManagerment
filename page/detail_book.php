@@ -10,8 +10,8 @@
                 include_once('dbprocess.php');
                 if (isset($_GET['id'])) {
                     $id = $_GET['id'];
-                    $sql = "SELECT * FROM SACH WHERE MASACH = '$id'";
-                    $book = executeResult($sql, true); // lấy 1 dòng
+                    $sql = "SELECT * FROM SACH S JOIN TACGIA TG ON S.MATACGIA = TG.MATACGIA WHERE MASACH = '$id'";
+                    $book = executePreparedSingleResult($sql); // lấy 1 dòng
 
                     if ($book != null) {
                         echo '<div class="book-info">';
@@ -31,29 +31,7 @@
                     }
                 }
             ?>
-
-
-
-            <img src="uploads/<?= $book['cover'] ?>" alt="">
-            <button class="buy-button">Mua Sách</button>
-        </div>
-        <div class="book-info">
-            <h2><?= $book['title'] ?></h2>
-            <div class="price"><?= number_format($book['price']) ?> đ</div>
-            <p><strong>Tác giả:</strong> <?= $book['author'] ?></p>
-            <p><strong>Thể loại:</strong> <?= $book['category_name'] ?></p>
-            <p><strong>Số trang:</strong> <?= $book['pages'] ?></p>
-            <p><strong>Năm xuất bản:</strong> <?= $book['year'] ?></p>
-            <div class="detail-buttons">
-                <button>TRÍCH ĐOẠN</button>
-                <button>MỤC LỤC</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="book-description">
-        <?= nl2br($book['description']) ?>
-    </div>
+    
 
     <h3 class="section-title">SÁCH CÙNG DANH MỤC</h3>
     <div class="book-grid">
@@ -76,9 +54,5 @@
         </div>
       <?php endforeach; ?>
     </div>
-  </div>
-
-  <div class="right">
-    <!-- Có thể thêm sách nổi bật hoặc giỏ hàng rút gọn -->
   </div>
 </div>
