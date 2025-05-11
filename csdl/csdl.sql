@@ -7,8 +7,8 @@ CREATE TABLE ACCOUNT (
 	USERNAME		VARCHAR(50),
 	PASSWORD		VARCHAR(255),
 	TENTAIKHOAN		VARCHAR(255) CHARACTER SET utf8mb4,
-	QUYEN			INT DEFAULT 3, -- 1: Admin, 2: Nhân viên, 3: Khách hàng
-	KHOA_TK			INT DEFAULT 0, -- 0: chưa khóa, 1: đã khóa
+	QUYEN			INT DEFAULT 2, -- 1: Admin, 2: Khách hàng
+	KHOA_TK			INT DEFAULT 0, -- 0: Chưa khóa, 1: Đã khóa
 	NGAYTAO         DATETIME DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY KEY (USERNAME, PASSWORD)
 ) CHARACTER SET utf8mb4;
@@ -142,5 +142,7 @@ VALUES
 ('TL13', 'Học ngoại ngữ'),
 ('TL14', 'Giáo trình'),
 ('TL15', 'Nghệ thuật');
+
+
 
 
