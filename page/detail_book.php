@@ -1,11 +1,7 @@
-
 <div class="layout">
   <div class="center book-detail">
     <div class="book-top">
-        <div class="book-box book-preview">
-
-
-
+        <div class="book-box">
             <?php
                 include_once('dbprocess.php');
                 if (isset($_GET['id'])) {
@@ -14,16 +10,16 @@
                     $book = executePreparedSingleResult($sql); // lấy 1 dòng
 
                     if ($book != null) {
-                        echo '<div class="book-info">';
+                        echo '<div class="book-preview">';
                             echo '<h2>' . $book['TENSACH'] . '</h2>';
-                            echo '<img src="' . $book['ANHBIA'] . '" style="max-width: 200px;">';
-                            echo '<p><strong>Tác giả:</strong> ' . $book['TENTACGIA'] . '</p>';
-                            echo '<div class="price"><p><strong>Giá:</strong> ' . number_format($book['GIAGOC'], 0, ',', '.') . 'đ</p></div>';
+                            echo '<img src="' . $book['ANHBIA'] . '">';
                             echo '<p><strong>Mô tả:</strong><br>' . nl2br($book['NOIDUNG']) . '</p>';
+                            echo '<p><strong>Tác giả:</strong> ' . $book['TENTACGIA'] . '</p>';
+                            echo '<div class="price"><p><strong>Giá:</strong> ' . number_format($book['GIAGOC'], 0, ',', '.') . 'đ</p></div>'; 
                             echo '<a href="index.php" class="btn btn-secondary mt-3">← Quay lại danh sách</a>';
                             echo '<div class="detail-buttons">';
-                                echo '<button>TRÍCH ĐOẠN</button>';
-                                echo '<button>MỤC LỤC</button>';
+                                echo '<button>Đặt hàng</button>';
+                                echo '<button>Giỏ hàng</button>';
                             echo '</div>';
                         echo '</div>';
                     } else {
@@ -31,28 +27,70 @@
                     }
                 }
             ?>
-    
+        </div>
+    </div> 
 
     <h3 class="section-title">SÁCH CÙNG DANH MỤC</h3>
     <div class="book-grid">
-        <?php foreach ($related_books as $item): ?>
-            <div class="book-box">
-                <img src="uploads/<?= $item['cover'] ?>">
-                <h4><?= $item['title'] ?></h4>
-                <p><?= $item['author'] ?></p>
-            </div>
-        <?php endforeach; ?>
+        <?php
+           $sql = "SELECT S.MATHELOAI FROM SACH S JOIN THELOAI TL ON S.MATHELOAI = TL.MATHELOAI WHERE MASACH = '$id'";
+            $cate = executePreparedSingleResult($sql);
+            $matheloai = $cate['MATHELOAI'];
+
+            $sql = "SELECT * FROM SACH WHERE MATHELOAI = '$matheloai' AND MASACH != '$id' LIMIT 5";
+
+            $result = executeResults($sql);
+            if ($result == null) {
+                echo '<p>Không tìm thấy sách.</p>';
+            }
+            else {
+                foreach ($result as $item) {
+                echo '<div class="book-box">';
+                    echo '<div class="book-top">';
+                        echo '<a href="index.php?id=' . $item['MASACH'] . '">';
+                            echo '<img src="' . $item['ANHBIA'] . '" alt="' . $item['TENSACH'] . '">';
+                            echo '<h3>' . $item['TENSACH'] . '</h3>';
+                        echo '</a>';
+                    echo '</div>';
+                    echo '<div class="book-bottom">';
+                        echo '<p>Giá: ' . number_format($item['GIAGOC'], 0, ',', '.') . 'đ</p>';
+                        echo '<button class="add-to-cart">Thêm vào giỏ</button>';
+                    echo '</div>';
+                echo '</div>';
+                }
+            }            
+        ?>  
     </div>
 
     <h3 class="section-title">SÁCH CÙNG TÁC GIẢ</h3>
     <div class="book-grid">
-      <?php foreach ($author_books as $item): ?>
-        <div class="book-box">
-            <img src="uploads/<?= $item['cover'] ?>">
-            <h4><?= $item['title'] ?></h4>
-            <p><?= $item['author'] ?></p>
-        </div>
-      <?php endforeach; ?>
+      <?php
+           $sql = "SELECT S.MATACGIA FROM SACH S JOIN TACGIA TG ON S.MATACGIA = TG.MATACGIA WHERE MASACH = '$id'";
+            $authur = executePreparedSingleResult($sql);
+            $matheloai = $authur['MATACGIA'];
+
+            $sql = "SELECT * FROM SACH WHERE MATACGIA = '$matheloai' AND MASACH != '$id' LIMIT 5";
+            $result = executeResults($sql);
+            if ($result == null) {
+                echo '<p>Không tìm thấy sách.</p>';
+            }
+            else {
+                foreach ($result as $item) {
+                echo '<div class="book-box">';
+                    echo '<div class="book-top">';
+                        echo '<a href="index.php?id=' . $item['MASACH'] . '">';
+                            echo '<img src="' . $item['ANHBIA'] . '" alt="' . $item['TENSACH'] . '">';
+                            echo '<h3>' . $item['TENSACH'] . '</h3>';
+                        echo '</a>';
+                    echo '</div>';
+                    echo '<div class="book-bottom">';
+                        echo '<p>Giá: ' . number_format($item['GIAGOC'], 0, ',', '.') . 'đ</p>';
+                        echo '<button class="add-to-cart">Thêm vào giỏ</button>';
+                    echo '</div>';
+                echo '</div>';
+                }
+            }            
+        ?>
     </div>
   </div>
 </div>
