@@ -68,7 +68,6 @@ body {
     border: none;
     border-radius: 50px 0 0 50px;
     outline: none;
-    font-size: 12pt;
 }
 
 .search-box button {
@@ -76,7 +75,6 @@ body {
     border: none;
     padding: 0 20px;
     color: white;
-    font-size: 18px;
     cursor: pointer;
 }
 
@@ -108,7 +106,6 @@ body {
 
 .cart a {
     margin: 0 20px;
-    font-size: 24px;
     color: #333;
     transition: color 0.3s;
 }
@@ -165,51 +162,56 @@ body {
 }
 
 /*===== footer ======*/
-  .footer {
+.footer {
     background-color: #2d2d2d;
     color: #eee;
     padding: 40px 20px;
     font-family: sans-serif;
     font-size: 14px;
-  }
+}
 
-  .footer-container {
+.footer-container {
     width: 100%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 30px;
-  }
+}
 
-  .footer-column {
+.footer-column {
     flex: 1 1 200px;
     min-width: 200px;
-  }
+}
 
-  .footer-column h3 {
+
+
+.footer-column h3 {
     font-size: 16px;
     margin-bottom: 10px;
     color: #fff;
-  }
+}
 
-  .footer-column p,
-  .footer-column a,
-  .footer-column li {
+.footer-column p,
+.footer-column a,
+.footer-column li {
     color: #ccc;
     text-decoration: none;
     list-style: none;
     margin-bottom: 8px;
     display: block;
-  }
+}
 
-  .footer-column a:hover {
+.footer-column a:hover {
     color: #fff;
-  }
+    transform: scale(1.4);
+    transform-origin: left;
+    transition: all 0.3s ease;
+}
 
-  .footer-bottom {
+.footer-bottom {
     text-align: center;
     color: #aaa;
     margin-top: 30px;
     font-size: 13px;
-  }
+}
