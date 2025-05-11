@@ -26,15 +26,15 @@
 
     <main>
         <?php 
-        if (isset($_SESSION["username"]) && $_SESSION["quyen"] == 1){
-            include "page/main_manager.php";
-        }  else{
-            if (isset($_GET['id'])) {
-                include "page/detail_book.php";
-            } else {
-                include "page/main_user.php";
+            if (isset($_SESSION["username"]) && $_SESSION["quyen"] == 1){
+                include "page/main_manager.php";
+            }  else{
+                if (isset($_GET['id'])) {
+                    include "page/detail_book.php";
+                } else {
+                    include "page/main_user.php";
+                }
             }
-        }
          ?>
     </main>
 
