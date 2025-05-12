@@ -54,5 +54,9 @@ $sql = "UPDATE KHACHHANG
 
 execute($sql);
 
-header('Location: ../index.php');
+// Thông báo thành công
+echo "<script>alert('Cập nhật thông tin thành công!');</script>";
+echo "<script>window.location.href = '../index.php';</script>";
+
+header("Location: ../index.php");
 ?>

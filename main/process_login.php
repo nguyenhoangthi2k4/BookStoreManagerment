@@ -31,7 +31,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         exit();
     }
 } else {
-    header("Location: index.php");
+    header("Location: ../index.php");
     exit();
 }
 ?>
