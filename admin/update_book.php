@@ -1,4 +1,4 @@
-<div class="upate-book">
+<div class="admin-book">
     <div class="center">
         <div class="card">
             <h2>📝 Cập nhật giá sách</h2>
@@ -37,7 +37,6 @@
                     } else {
                         document.getElementById("giagoc").value = "";
                     }
-
                 }
             </script>
         </div>

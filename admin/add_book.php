@@ -2,7 +2,7 @@
     include_once "dbprocess.php";  
 ?>
 
-<div class="add-book">
+<div class="admin-book">
     <div class="center">
         <div class="card">
             <h2>Nhập sách mới</h2>

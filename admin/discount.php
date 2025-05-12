@@ -1,4 +1,4 @@
-<div class="layout manager-layout">
+<div class="admin-book">
     <div class="center">
         <div class="card">
         <h2>🎯 Cập nhật khuyến mãi</h2>

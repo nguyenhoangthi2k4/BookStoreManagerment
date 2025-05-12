@@ -35,8 +35,8 @@
                     </button>
                     <div class="collapse" id="dashboard-collapse">
                         <ul class="btn-toggle-nav list-unstyled">
-                            <li><a href="#" class="link-dark rounded">Sao lưu</a></li>
-                            <li><a href="#" class="link-dark rounded">Phục hồi</a></li>
+                            <li><a href="index.php?do=backup" class="link-dark rounded">Sao lưu</a></li>
+                            <li><a href="index.php?do=restore" class="link-dark rounded">Phục hồi</a></li>
                         </ul>
                     </div>
                 </li>
@@ -69,12 +69,18 @@
                 case 'discount':
                     include "admin/discount.php";
                     break; 
+                case 'backup':
+                    include "admin/backup.php";
+                    break;
+                case 'restore':
+                    include "admin/restore.php";
+                    break;
                 default:
                     include "admin/add_book.php";
                     break;
             }
         } else {
-            echo "<h1>Chức năng này chưa được cập nhật</h1>";
+            include "admin/add_book.php";
         }    
     ?>
     </div>
