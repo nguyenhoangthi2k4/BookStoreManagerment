@@ -34,7 +34,10 @@
         $sqlInsertCT = "INSERT INTO CTHOADON (MAHOADON, MASACH, SOLUONGMUA, DONGIABAN) 
                         VALUES ('$mahoadon', '$masach', '$soluong', '$dongia')";
         execute($sqlInsertCT);
+        $sqlDelete_slt = "UPDATE SACH SET SOLUONGTON = SOLUONGTON-'$soluong' WHERE MASACH = '$masach'";
+        execute($sqlDelete_slt);
     }
+
 
     // Xóa giỏ hàng
     unset($_SESSION["products"]);
