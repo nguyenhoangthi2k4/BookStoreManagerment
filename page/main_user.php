@@ -155,7 +155,9 @@
             <hr />
             <strong>Tổng cũ: <?= number_format($total, 0, ',', '.') ?>đ</strong>
             <br /><br />
-            <button class="checkout">Thanh toán</button>
+            <form action="page/checkout.php" method="post">
+                <button type="submit" class="checkout">Thanh toán</button>
+            </form>
         </div>
     </div>
 </body>

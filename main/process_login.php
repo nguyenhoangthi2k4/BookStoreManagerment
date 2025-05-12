@@ -9,13 +9,17 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $password = trim($_POST['password']);
 
     // Tìm tài khoản theo username
-    $sql = 'SELECT * FROM ACCOUNT WHERE USERNAME = "'.$username.'"';
+    $sql = 'SELECT A.*, K.MAKHACHHANG 
+        FROM ACCOUNT A 
+        JOIN KHACHHANG K ON A.USERNAME = K.USERNAME 
+        WHERE A.USERNAME = "'.$username.'"';
     $account = executePreparedSingleResult($sql);
 
     // Nếu tài khoản tồn tại và mật khẩu đúng
     if ($account && password_verify($password, $account['PASSWORD'])) {
         $_SESSION['username'] = $account['USERNAME'];
         $_SESSION['quyen'] = $account['QUYEN'];
+        $_SESSION['user_id'] = $account['MAKHACHHANG'];
 
         header("Location: ../index.php");
         exit();
