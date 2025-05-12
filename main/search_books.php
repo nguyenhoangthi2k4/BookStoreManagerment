@@ -16,7 +16,7 @@ if (isset($_POST['keyword'])) {
             echo '</div>';
         }
     } else {
-        echo "<p>Không tìm thấy sách nào.</p>";
+        echo "<div class='book-box'><span>Không tìm thấy sách nào. </span></div>";
     }
 }
 ?>

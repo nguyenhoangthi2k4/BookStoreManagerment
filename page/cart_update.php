@@ -13,6 +13,7 @@ if (isset($_POST["type"]) && $_POST["type"] == 'add') {
     $sql = "SELECT TENSACH as product_name, GIAGOC as price FROM SACH WHERE MASACH='$product_code'";
     $results = executePreparedSingleResult($sql);
     $obj = (object) $results;
+    $product = array();
 
     if ($results) {
         // Thêm sản phẩm vào giỏ hàng

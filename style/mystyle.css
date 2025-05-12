@@ -102,8 +102,12 @@ body {
 .search-results-box .book-box {
     padding: 10px;
     margin: 10px;
-    border-bottom: 1px solid #ddd;
+    border: 1px groove #705b5b;
     position: relative;
+}
+
+.search-results-box .book-box span {
+    color: #333;
 }
 
 .search-results-box .book-box a {

@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
        
 
-        // Ẩn kết quả khi click ra ngoài
+    // Ẩn kết quả khi click ra ngoài
     document.addEventListener("click", function (e) {
         const box = document.getElementById("searchResults");
         const searchBox = document.querySelector(".search-box");
