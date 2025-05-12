@@ -113,9 +113,18 @@
                             echo '</div>';
                             echo '<div class="book-bottom">';
                                 echo '<p>Giá: ' . number_format($item['GIAGOC'], 0, ',', '.') . 'đ</p>';
-                                echo '<form class="add-to-cart-form" onsubmit="addToCart(event, \'' . $item['MASACH'] . '\', 1, \''. base64_encode($_SERVER['REQUEST_URI']) .'\')">';
-                                    echo '<button type="submit">Thêm vào giỏ</button>';
-                                echo '</form>';
+
+                                if (!isset($_SESSION['username'])) { 
+                                    // Chưa đăng nhập
+                                    echo '<form class="add-to-cart-form" onsubmit="alert(\'Bạn cần đăng nhập để sử dụng chức năng này\'); loadLoginForm(); return false;">';
+                                        echo '<button type="submit">Thêm vào giỏ</button>';
+                                    echo '</form>';
+                                } else {
+                                    // Đã đăng nhập
+                                    echo '<form class="add-to-cart-form" onsubmit="addToCart(event, \'' . $item['MASACH'] . '\', 1, \''. base64_encode($_SERVER['REQUEST_URI']) .'\')">';
+                                        echo '<button type="submit">Thêm vào giỏ</button>';
+                                    echo '</form>';
+                                }
                             echo '</div>';
                         echo '</div>';
                     }
