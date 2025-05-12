@@ -15,7 +15,7 @@
     padding: 0 20px;
 }
 
-.nav-header h2 {
+.title-book {
     font-size: 24px;	
 	  padding: 20px;
     margin: 20px 0;
@@ -87,22 +87,27 @@
   align-items: flex-start;
 }
 
-.center {
+.layout .center {
   flex: 1 1 80%;
 }
 
-.right {
+.layout .right {
   flex: 0 0 20%;
   background-color: #f9f9f9;
   padding: 20px;
   border-left: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 0 8px rgba(0,0,0,0.05);
+   
 }
 
 /* Book grid */
-.section-title {
-  margin: 20px;
+.category-section {
+    margin-bottom: 40px;
+}
+
+.category-section h2 {
+    margin-bottom: 10px;
 }
 
 .book-grid {
@@ -124,16 +129,16 @@
   flex-direction: column;
 }
 
+.book-top a {
+  text-decoration: none;
+  color: #333;
+}
+
 .book-box .book-top {
   flex: 1 1 90%;
   height: 90%;
   border-bottom: 1px solid #080606;  
   text-align: center;
-}
-
-.book-top a {
-  text-decoration: none;
-  color: #333;
 }
 
 .book-box .book-bottom {
@@ -153,6 +158,30 @@
   margin-bottom: 10px;
   box-shadow: 6px 6px 5px rgba(120, 114, 114, 0.5);
 }
+
+/* == Xem thêm == */
+.see-more {
+  margin-top: 10px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.see-more-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #8B0000;
+  color: white;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background-color: #a30000;
+  transform: scale(1.05);
+}
+
 
 .book-box h4 {
   font-size: 16px;
@@ -347,6 +376,12 @@
   gap: 30px;
   margin-bottom: 30px;
   padding: 20px;
+}
+
+.book-detail .section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px;
 }
 
 .book-preview {

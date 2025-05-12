@@ -60,6 +60,7 @@ body {
     border-radius: 50px;
     overflow: hidden;
     border: 1px solid #ccc;
+    position: relative;
 }
 
 .search-box input {
@@ -76,6 +77,22 @@ body {
     padding: 0 20px;
     color: white;
     cursor: pointer;
+}
+
+.search-results-box {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 999;
+    border: 1px solid #ccc;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    display: none; /* ẩn mặc định */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 /* === Right section: User + Cart === */
