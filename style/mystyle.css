@@ -112,6 +112,7 @@ body {
 
 .search-results-box .book-box a {
     text-decoration: none;
+    text-align: left;
     color: #333;
     font-weight: bold;
 }
