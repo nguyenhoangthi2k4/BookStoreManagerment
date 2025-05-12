@@ -37,6 +37,37 @@
             })
             .catch(error => console.error('Error:', error));
         }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll('.see-more-btn');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const matl = this.getAttribute('data-matl');
+                    let page = parseInt(this.getAttribute('data-page')) + 1;
+
+                    const btn = this;
+                    btn.innerText = "Đang tải...";
+
+                    fetch('main/load_more.php', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                        body: 'matl=' + matl + '&page=' + (page - 1)
+                    })
+                    .then(res => res.text())
+                    .then(html => {
+                        if (html.trim() !== '') {
+                            document.getElementById('book-grid-' + matl).insertAdjacentHTML('beforeend', html);
+                            btn.setAttribute('data-page', page);
+                            btn.innerText = "Xem thêm";
+                        } else {
+                            btn.innerText = "Không còn sách nào";
+                            btn.disabled = true;
+                        }
+                        });
+                    });
+                });
+            });
     </script>
 </head>
 <body>
