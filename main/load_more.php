@@ -15,7 +15,7 @@ if (isset($_POST['matl']) && isset($_POST['page'])) {
         echo '<div class="book-top">';
         echo '<a href="index.php?id=' . $item['MASACH'] . '">';
         echo '<img src="' . $item['ANHBIA'] . '" alt="' . $item['TENSACH'] . '">';
-        echo '<h3>' . $item['TENSACH'] . '</h3>';
+        echo '<h4>' . $item['TENSACH'] . '</h4>';
         echo '</a>';
         echo '</div>';
         echo '<div class="book-bottom">';

@@ -385,6 +385,8 @@
 }
 
 .book-preview {
+  margin: auto;
+  width: 1050px;
   text-align: left;
   font-size: 50px;
 }
