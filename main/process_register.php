@@ -36,7 +36,7 @@
 			$sqlAcc = 'INSERT INTO ACCOUNT (USERNAME, PASSWORD, TENTAIKHOAN, QUYEN, KHOA_TK) VALUES ("'.$username.'","'.$hashedPassword.'","'.$name.'","'.$role.'","'.$status.'")';
             execute($sqlAcc);
 			// Thêm vào KHACHHANG
-			$sqlKH = 'INSERT INTO KHACHHANG (TENKHACHHANG, DIACHI, SDT, USERNAME, EMAILEMAIL) VALUES ("'.$name.'","'.$address.'","'.$phone.'","'.$username.'","'.$email.'")';
+			$sqlKH = 'INSERT INTO KHACHHANG (TENKHACHHANG, DIACHI, SDT, USERNAME, EMAIL) VALUES ("'.$name.'","'.$address.'","'.$phone.'","'.$username.'","'.$email.'")';
             execute($sqlKH);
 			header("Location: ../index.php");
 			exit();

@@ -48,20 +48,6 @@
             </ul>
         </div>
     </div>
-
-    <div class="cart">
-        <?php 
-            if (!isset($_SESSION['user'])) {
-                // Chưa đăng nhập
-                echo "<a href='#' onclick='alert(\"Bạn cần đăng nhập để sử dụng chức năng này\"); loadLoginForm();'>
-                        <i class='bx bx-cart' style='font-size: 24px;'></i>
-                    </a>";
-            } else {
-                // Đã đăng nhập
-                echo "<a href='cart.php'><i class='bx bx-cart' style='font-size: 24px;'></i></a>";
-            }
-        ?>
-    </div>    
 </div>
 
 <!-- Banner -->

@@ -26,12 +26,12 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     } else {
         echo "<script>
                 alert('Sai tên đăng nhập hoặc mật khẩu!');
-                window.location.href = 'index.php';
+                window.location.href = '../index.php';
               </script>";
         exit();
     }
 } else {
-    header("Location: index.php");
+    header("Location: ../index.php");
     exit();
 }
 ?>
