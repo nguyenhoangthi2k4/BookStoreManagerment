@@ -18,8 +18,16 @@
                             echo '<div class="price"><p><strong>Giá:</strong> ' . number_format($book['GIAGOC'], 0, ',', '.') . 'đ</p></div>'; 
                             echo '<a href="index.php" class="btn btn-secondary mt-3">← Quay lại danh sách</a>';
                             echo '<div class="detail-buttons">';
-                                echo '<button>Đặt hàng</button>';
-                                echo '<button>Giỏ hàng</button>';
+                                //echo '<button>Đặt hàng</button>';
+                                //echo '<button>Giỏ hàng</button>';
+                                echo '<form action="page/cart_update.php" method="post">';
+                                    echo '<input type="hidden" name="product_code" value="' . $book['MASACH'] . '">';
+                                    echo '<input type="hidden" name="product_qty" value="1">';
+                                    echo '<input type="hidden" name="type" value="add">';
+                                    echo '<input type="hidden" name="flag" value="true">';
+                                    echo '<input type="hidden" name="return_url" value="' . base64_encode($_SERVER['REQUEST_URI']) . '">';
+                                    echo '<button type="submit" class="add-to-cart">Thêm vào giỏ</button>';
+                                echo '</form>';
                             echo '</div>';
                         echo '</div>';
                     } else {
@@ -54,7 +62,15 @@
                     echo '</div>';
                     echo '<div class="book-bottom">';
                         echo '<p>Giá: ' . number_format($item['GIAGOC'], 0, ',', '.') . 'đ</p>';
-                        echo '<button class="add-to-cart">Thêm vào giỏ</button>';
+                        //echo '<button class="add-to-cart">Thêm vào giỏ</button>';
+                        echo '<form action="page/cart_update.php" method="post">';
+                            echo '<input type="hidden" name="product_code" value="' . $item['MASACH'] . '">';
+                            echo '<input type="hidden" name="product_qty" value="1">';
+                            echo '<input type="hidden" name="type" value="add">';
+                            echo '<input type="hidden" name="flag" value="true">';
+                            echo '<input type="hidden" name="return_url" value="' . base64_encode($_SERVER['REQUEST_URI']) . '">';
+                            echo '<button type="submit" class="add-to-cart">Thêm vào giỏ</button>';
+                        echo '</form>';
                     echo '</div>';
                 echo '</div>';
                 }
@@ -85,7 +101,15 @@
                     echo '</div>';
                     echo '<div class="book-bottom">';
                         echo '<p>Giá: ' . number_format($item['GIAGOC'], 0, ',', '.') . 'đ</p>';
-                        echo '<button class="add-to-cart">Thêm vào giỏ</button>';
+                        //echo '<button class="add-to-cart">Thêm vào giỏ</button>';
+                        echo '<form action="page/cart_update.php" method="post">';
+                            echo '<input type="hidden" name="product_code" value="' . $item['MASACH'] . '">';
+                            echo '<input type="hidden" name="product_qty" value="1">';
+                            echo '<input type="hidden" name="type" value="add">';
+                            echo '<input type="hidden" name="flag" value="true">';
+                            echo '<input type="hidden" name="return_url" value="' . base64_encode($_SERVER['REQUEST_URI']) . '">';
+                            echo '<button type="submit" class="add-to-cart">Thêm vào giỏ</button>';
+                        echo '</form>';
                     echo '</div>';
                 echo '</div>';
                 }

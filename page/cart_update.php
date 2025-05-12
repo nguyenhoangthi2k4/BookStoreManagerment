@@ -43,7 +43,10 @@ if (isset($_POST["type"]) && $_POST["type"] == 'add') {
             $_SESSION["products"] = $new_product;
         }
     }
-
+    if(isset($_POST["flag"]) && $_POST["flag"] == 'true'){
+        header('Location: ../index.php');
+        exit();
+    }
     // Trả về HTML cho giỏ hàng mới
     $cartHTML = '';
     $total = 0;

@@ -25,4 +25,14 @@
         }
         return $data;
     }
+
+    function executeInsert($sql) {
+        global $conn;
+        mysqli_set_charset($conn, 'utf8');
+        if (!mysqli_query($conn, $sql)) {
+            die("Lỗi SQL: " . mysqli_error($conn));
+        }
+        return mysqli_insert_id($conn);
+    }
+
 ?>
