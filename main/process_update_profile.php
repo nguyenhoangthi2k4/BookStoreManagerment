@@ -54,6 +54,5 @@ $sql = "UPDATE KHACHHANG
 
 execute($sql);
 
-echo "<p style='color:green;'>Cập nhật hồ sơ thành công!</p>";
-echo '<p><a href="edit_profile.php">Quay lại hồ sơ</a></p>';
+header('Location: ../index.php');
 ?>

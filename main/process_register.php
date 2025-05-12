@@ -22,7 +22,7 @@
 			}
 
 			// Kiểm tra username đã tồn tại
-			$sql = 'SELECT COUNT(*) AS total FROM ACCOUNT WHERE USERNAME = " '.$username.' " ';
+			$sql = 'SELECT COUNT(*) AS total FROM ACCOUNT WHERE USERNAME = "'.$username.'"';
 			$check = executePreparedSingleResult($sql);
 			if ($check && $check['total'] > 0) {
 				header("Location: register.php?error=exists");
@@ -36,7 +36,7 @@
 			$sqlAcc = 'INSERT INTO ACCOUNT (USERNAME, PASSWORD, TENTAIKHOAN, QUYEN, KHOA_TK) VALUES ("'.$username.'","'.$hashedPassword.'","'.$name.'","'.$role.'","'.$status.'")';
             execute($sqlAcc);
 			// Thêm vào KHACHHANG
-			$sqlKH = 'INSERT INTO KHACHHANG (TENKHACHHANG, DIACHI, SDT, USERNAME, EMAILEMAIL) VALUES ("'.$name.'","'.$address.'","'.$phone.'","'.$username.'","'.$email.'")';
+			$sqlKH = 'INSERT INTO KHACHHANG (TENKHACHHANG, DIACHI, SDT, USERNAME, EMAIL) VALUES ("'.$name.'","'.$address.'","'.$phone.'","'.$username.'","'.$email.'")';
             execute($sqlKH);
 			header("Location: ../index.php");
 			exit();
