@@ -24,40 +24,7 @@
     <div class="search-box">
         <input type="text" title="Nhập tên sách" placeholder="Tìm kiếm sản phẩm..." id="searchInput">
         <button type="button" id="searchBtn" class="btn_search"><i class='bx bx-search'></i></button>
-        <div id="searchResults" class="search-results-box"></div>
-        
-        <script>
-            document.getElementById("searchBtn").addEventListener("click", function () {
-                const keyword = document.getElementById("searchInput").value.trim();
-                const resultBox = document.getElementById("searchResults");
-
-                if (keyword !== "") {
-                    fetch("search_books.php", {
-                        method: "POST",
-                        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                        body: "keyword=" + encodeURIComponent(keyword)
-                    })
-                    .then(res => res.text())
-                    .then(html => {
-                        resultBox.style.display = "block";
-                        resultBox.innerHTML = html;
-                    });
-                } else {
-                    resultBox.style.display = "none";
-                    resultBox.innerHTML = "";
-                }
-            });
-
-            // Ẩn kết quả khi click ra ngoài
-            document.addEventListener("click", function (e) {
-                const box = document.getElementById("searchResults");
-                const searchBox = document.querySelector(".search-box");
-
-                if (!searchBox.contains(e.target)) {
-                    box.style.display = "none";
-                }
-            });
-        </script>
+        <div id="searchResults" class="search-results-box"></div>        
     </div>
 
     <div class="header-right">
@@ -94,7 +61,7 @@
                 echo "<a href='cart.php'><i class='bx bx-cart' style='font-size: 24px;'></i></a>";
             }
         ?>
-    </div>
+    </div>    
 </div>
 
 <!-- Banner -->
@@ -138,4 +105,42 @@ function loadLoginForm() {
 function closeLoginForm() {
     document.getElementById("loginPopup").style.display = "none";
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("searchBtn").addEventListener("click", function () {                
+        const keyword = document.getElementById("searchInput").value.trim();
+        const resultBox = document.getElementById("searchResults");
+
+        if (keyword !== "") {
+            fetch("main/search_books.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: "keyword=" + encodeURIComponent(keyword)
+            })
+            .then(res => res.text())
+            .then(html => {
+                console.log("Kết quả nhận được:", html);
+                resultBox.style.display = "block";
+                resultBox.innerHTML = html;
+            });
+        } else {
+            resultBox.style.display = "none";
+            resultBox.innerHTML = "";
+        }
+    });
+
+       
+
+        // Ẩn kết quả khi click ra ngoài
+    document.addEventListener("click", function (e) {
+        const box = document.getElementById("searchResults");
+        const searchBox = document.querySelector(".search-box");
+
+        if (!searchBox.contains(e.target)) {
+            box.style.display = "none";
+        }
+    });
+});   
+
 </script>
+

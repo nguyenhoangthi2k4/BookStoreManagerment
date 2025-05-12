@@ -12,7 +12,7 @@ if (isset($_POST['keyword'])) {
                 echo '<a href="index.php?id=' . $item['MASACH'] . '">';
                     echo '<img src="' . $item['ANHBIA'] . '" alt="' . $item['TENSACH'] . '">';
                     echo '<h3>' . $item['TENSACH'] . '</h3>';
-                echo '</a>';                
+                echo '</a>';
             echo '</div>';
         }
     } else {
