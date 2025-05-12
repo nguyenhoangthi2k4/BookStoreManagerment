@@ -68,27 +68,27 @@
                     $tentl = $cate['TENTHELOAI'];
 
                     echo '<div class="category-section" id="'. $matl . '">';
-                        echo "<h2 class='title-book'>$tentl</h2>";
-                        echo "<div class='book-grid' id='book-grid-$matl'>";
+                    echo "<h2 class='title-book'>$tentl</h2>";
+                    echo "<div class='book-grid' id='book-grid-$matl'>";
 
-                        $sachs = executeResults("SELECT * FROM SACH WHERE MATHELOAI = '$matl' LIMIT 4");
-                        foreach ($sachs as $item) {
-                            echo '<div class="book-box">';
-                                echo '<div class="book-top">';
-                                    echo '<a href="index.php?id=' . $item['MASACH'] . '">';
-                                    echo '<img src="' . $item['ANHBIA'] . '" alt="' . $item['TENSACH'] . '">';
-                                    echo '<h3>' . $item['TENSACH'] . '</h3>';
-                                    echo '</a>';
-                                echo '</div>';
-                                echo '<div class="book-bottom">';
-                                    echo '<p>Giá: ' . number_format($item['GIAGOC'], 0, ',', '.') . 'đ</p>';
-                                    echo '<form class="add-to-cart-form" onsubmit="addToCart(event, \'' . $item['MASACH'] . '\', 1, \''. base64_encode($_SERVER['REQUEST_URI']) .'\')">';
-                                        echo '<button type="submit">Thêm vào giỏ</button>';
-                                    echo '</form>';
-                                echo '</div>';
+                    $sachs = executeResults("SELECT * FROM SACH WHERE MATHELOAI = '$matl' LIMIT 4");
+                    foreach ($sachs as $item) {
+                        echo '<div class="book-box">';
+                            echo '<div class="book-top">';
+                                echo '<a href="index.php?id=' . $item['MASACH'] . '">';
+                                echo '<img src="' . $item['ANHBIA'] . '" alt="' . $item['TENSACH'] . '">';
+                                echo '<h3>' . $item['TENSACH'] . '</h3>';
+                                echo '</a>';
                             echo '</div>';
-                        }
-                        echo '</div>'; // end book-grid
+                            echo '<div class="book-bottom">';
+                                echo '<p>Giá: ' . number_format($item['GIAGOC'], 0, ',', '.') . 'đ</p>';
+                                echo '<form class="add-to-cart-form" onsubmit="addToCart(event, \'' . $item['MASACH'] . '\', 1, \''. base64_encode($_SERVER['REQUEST_URI']) .'\')">';
+                                    echo '<button type="submit">Thêm vào giỏ</button>';
+                                echo '</form>';
+                            echo '</div>';
+                        echo '</div>';
+                    }
+                    echo '</div>'; // end book-grid
 
                     echo '<div class="see-more">';
                         echo '<button class="see-more-btn" data-matl="'.$matl.'" data-page="1">Xem thêm</button>';
@@ -113,7 +113,7 @@
                 ?>
             </ul>
             <hr />
-            <strong>Tổng: <?= number_format($total, 0, ',', '.') ?>đ</strong>
+            <strong>Tổng cũ: <?= number_format($total, 0, ',', '.') ?>đ</strong>
             <br /><br />
             <button class="checkout">Thanh toán</button>
         </div>

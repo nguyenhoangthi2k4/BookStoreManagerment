@@ -17,7 +17,7 @@ if (isset($_POST["type"]) && $_POST["type"] == 'add') {
     if ($results) {
         // Thêm sản phẩm vào giỏ hàng
         $new_product = array(array('name' => $obj->product_name, 'code' => $product_code, 'qty' => $product_qty, 'price' => $obj->price));
-
+        $product = [];
         if (isset($_SESSION["products"])) {
             $found = false;
 
@@ -54,7 +54,7 @@ if (isset($_POST["type"]) && $_POST["type"] == 'add') {
         }
     }
     $cartHTML .= '<hr />';
-    $cartHTML .= '<strong>Tổng: '. number_format($total, 0, ',', '.') .'đ</strong>';
+    $cartHTML .= '<strong>Tổng mới: '. number_format($total, 0, ',', '.') .'đ</strong>';
 
     echo $cartHTML; // Trả về giỏ hàng mới
 }
@@ -87,7 +87,7 @@ if (isset($_GET["removep"]) && isset($_GET["return_url"]) && isset($_SESSION["pr
         }
     }
     $cartHTML .= '<hr />';
-    $cartHTML .= '<strong>Tổng: '. number_format($total, 0, ',', '.') .'đ</strong>';
+    $cartHTML .= '<strong>Tổng mới: '. number_format($total, 0, ',', '.') .'đ</strong>';
 
     echo $cartHTML; // Trả về giỏ hàng mới
 }
