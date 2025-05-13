@@ -1,4 +1,4 @@
-<div class="admin-book">
+<div class="admin-book restore">
   <div class="center">
     <div class="card">
         <h2>Phục hồi dữ liệu</h2>

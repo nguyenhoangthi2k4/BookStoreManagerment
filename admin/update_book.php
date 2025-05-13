@@ -1,7 +1,7 @@
-<div class="admin-book">
+<div class="admin-book update_book">
     <div class="center">
         <div class="card">
-            <h2>📝 Cập nhật giá sách</h2>
+            <h2>Cập nhật giá sách</h2>
             <form class="form-grid" action="admin/process_update_book.php" method="post" enctype="multipart/form-data">
                 <?php
                     include_once 'dbprocess.php';

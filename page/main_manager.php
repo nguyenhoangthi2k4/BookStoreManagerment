@@ -30,10 +30,10 @@
                     </div>
                 </li>  
                 <li class="mb-1">
-                    <button class="btn btn-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                    <button class="btn btn-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#data-collapse" aria-expanded="false">
                     Dữ liệu
                     </button>
-                    <div class="collapse" id="dashboard-collapse">
+                    <div class="collapse" id="data-collapse">
                         <ul class="btn-toggle-nav list-unstyled">
                             <li><a href="index.php?do=backup" class="link-dark rounded">Sao lưu</a></li>
                             <li><a href="index.php?do=restore" class="link-dark rounded">Phục hồi</a></li>

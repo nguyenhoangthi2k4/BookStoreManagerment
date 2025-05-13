@@ -2,7 +2,7 @@
     include_once "dbprocess.php";  
 ?>
 
-<div class="admin-book">
+<div class="admin-book add-book">
     <div class="center">
         <div class="card">
             <h2>Nhập sách mới</h2>
@@ -28,6 +28,7 @@
                             echo '<p>Không tìm thấy nhà xuất bản.</p>';
                         }
                     ?>
+                </label>
                 <label>Tác giả:
                     <?php 
                         $sTagia = "SELECT * FROM tacgia";

@@ -1,7 +1,7 @@
-<div class="admin-book">
+<div class="admin-book discount">
     <div class="center">
         <div class="card">
-        <h2>🎯 Cập nhật khuyến mãi</h2>
+        <h2>Cập nhật khuyến mãi</h2>
         <form class="form-grid">
             <label>Chọn sách:
                 <select>

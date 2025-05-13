@@ -265,12 +265,11 @@
 .manager-layout .center {
   flex: 0 0 75%;
   width: 100%;
-  background-color: #f5e6e6;
-  padding: 5px;
+  background-color: #320202;
   border-radius: 8px;
 }
 
-.form-grid {
+/* .form-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
@@ -307,7 +306,7 @@
 
 .form-grid button:hover {
   background-color: #146c43;
-}
+} */
 
 /*==========detail============*/
 .book-detail .book-top {
@@ -365,4 +364,29 @@
   background: #1e0101;
   cursor: pointer;
   border-radius: 6px;
+}
+
+/* admin - book */
+.admin-book {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.admin-book h2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.add-book form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
