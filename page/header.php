@@ -37,8 +37,19 @@
                             echo "<li><a href='main/profile.php'>Admin</a></li>";
                             echo "<li><a href='main/logout.php'>Đăng xuất</a></li>";
                         }else{
-                            echo "<li><a href='main/profile.php'>Khách hàng</a></li>";
-                            echo "<li><a href='main/logout.php'>Đăng xuất</a></li>";
+                            // echo "<li><a href='main/profile.php'>Khách hàng</a></li>";
+                            // echo "<li><a href='main/logout.php'>Đăng xuất</a></li>";
+                            echo "
+                                <li class='dropdown'>
+                                    <a href='#' class='dropbtn'>Khách hàng</a>
+                                    <ul class='dropdown-content'>
+                                        <li><a href='main/profile.php'>Xem hồ sơ</a></li>
+                                        <li><a href='index.php?action=history'>Lịch sử mua hàng</a></li>
+                                        <li><a href='index.php?action=change_password'>Đổi mật khẩu</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href='main/logout.php'>Đăng xuất</a></li>
+                            ";
                         }
                     } else {
                         echo "<li><a href='#' onclick='loadLoginForm()'>Đăng nhập</a></li>";
