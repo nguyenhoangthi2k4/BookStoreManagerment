@@ -20,8 +20,10 @@
                  ?> 
                 <label>Giá gốc:
                     <input type="text" id="giagoc" name="giagoc" required>                    
-                </label>               
-                <button type="submit">Cập nhật</button>
+                </label> 
+                <div class="btn-container">
+                    <button type="submit">Cập nhật</button>
+                </div>               
             </form>
             <script>
                 function getGiaGoc() {

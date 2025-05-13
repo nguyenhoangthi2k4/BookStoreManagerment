@@ -138,8 +138,8 @@
             ?>
         </div>
 
-        <div class="right">
-            <h3>🛒 Giỏ hàng</h3>
+        <div class="right" >
+            <h3 id="cart">🛒 Giỏ hàng</h3>
             <ul>
                 <?php 
                     $total = 0;
@@ -155,9 +155,9 @@
             <hr />
             <strong>Tổng cũ: <?= number_format($total, 0, ',', '.') ?>đ</strong>
             <br /><br />
-            <form action="page/checkout.php" method="post">
+            <form action="page/checkout.php" method="post" name ="checkout">
                 <button type="submit" class="checkout">Thanh toán</button>
-            </form>
+            </form>            
         </div>
     </div>
 </body>

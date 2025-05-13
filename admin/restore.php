@@ -7,8 +7,11 @@
             <lable>Chọn file sao lưu:
                 <input type="file" name="backup_file" accept=".sql" required>
             </lable>
-            <button type="submit">Tiến hành phục hồi</button>
+            <div class="btn-container">
+                <button type="submit">Phục hồi</button>
             <div id="result"></div>
+            </div> 
+            
         </form>
 
         <script>

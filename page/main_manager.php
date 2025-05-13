@@ -47,7 +47,7 @@
                     <div class="collapse" id="account-collapse">
                         <ul class="btn-toggle-nav list-unstyled">
                             <li><a href="#" class="link-dark rounded">Thông tin tài khoản </a></li>
-                            <li><a href="index.php?do=logout" class="link-dark rounded">Thoát tài khoản</a></li>
+                            <li><a href="main/logout.php" class="link-dark rounded">Thoát tài khoản</a></li>
                         </ul>
                     </div>
                 </li>

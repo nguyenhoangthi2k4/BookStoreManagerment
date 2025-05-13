@@ -73,7 +73,9 @@
                 <label>Nội dung:
                     <input type="text" name="noidung" required>
                 </label>
-                <button type="submit">Lưu</button>
+                <div class="btn-container">
+                    <button type="submit">Lưu</button>
+                </div>                
             </form>
         </div>
     </div>

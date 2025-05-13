@@ -5,6 +5,7 @@
 
     // Kiểm tra giỏ hàng
     if (!isset($_SESSION['products']) || count($_SESSION['products']) == 0) {
+        echo "Giỏ hàng trống!";
         header("Location: ../index.php?status=empty");
         exit;
     }

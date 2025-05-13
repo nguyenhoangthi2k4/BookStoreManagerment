@@ -263,9 +263,8 @@
 }
 
 .manager-layout .center {
-  flex: 0 0 75%;
+  flex: 1 1 75%;
   width: 100%;
-  background-color: #320202;
   border-radius: 8px;
 }
 
@@ -366,9 +365,8 @@
   border-radius: 6px;
 }
 
-/* admin - book */
+/* admin*/
 .admin-book {
-  display: flex;
   gap: 20px;
   width: 100%;
   height: auto;
@@ -382,14 +380,49 @@
   margin: 20px;
 }
 
-.add-book form{
+.admin-book form label {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
+
+.admin-book form input, select {
+  flex: 1 1 70%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.admin-book form .btn-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.admin-book form .btn-container button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-book form{
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
 /*==============history===============*/
 .transaction-history {
   max-width: 900px;

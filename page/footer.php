@@ -12,7 +12,6 @@
       <a href="index.php">Trang chủ</a>
       <a href="#">Sách mới</a>
       <a href="#">Thể loại</a>
-      <a href="#">Giỏ hàng</a>
     </div>
 
     <!-- Cột 3 -->
