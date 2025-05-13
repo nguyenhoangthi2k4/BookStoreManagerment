@@ -36,6 +36,8 @@
             include "main/register.php";
         } elseif ($action == 'change_password') {
             include "main/change_password.php";
+        } elseif ($action == 'history') {
+            include "main/history.php";
         } elseif (!empty($id)) {
             include "page/detail_book.php";
         } else {
