@@ -1,8 +1,9 @@
-<div class="statistic-container">
-    <h2>Thống Kê Sách</h2>
+<div class="admin-book statistic-container">
+    <div class="center">
+        <h2>Thống Kê Sách</h2>
 
         <!-- Best seller (top 5) -->
-    <div class="section-title">Top 5 sách bán chạy nhất</div>
+    <p>Top 5 sách bán chạy nhất</p>
     <table>
         <thead>
         <tr>
@@ -36,7 +37,7 @@
     </table>
 
     <!-- Thống kê tất cả sách bán được -->
-    <div class="section-title">Tổng số lượng sách đã bán</div>
+    <p>Tổng số lượng sách đã bán</p>
     <table>
         <thead>
         <tr>
@@ -65,4 +66,5 @@
         ?>
         </tbody>
     </table>
+    </div>    
 </div>

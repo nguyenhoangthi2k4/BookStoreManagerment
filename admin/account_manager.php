@@ -30,7 +30,7 @@ document.querySelectorAll('.form_role').forEach(form => {
         // Khi nhấn nút submit, gọi requestSubmit để gửi form
         btnSubmit.addEventListener('click', function(e) {
 			console.log("Cập nhật quyền");
-            e.preventDefault(); /
+            e.preventDefault(); 
             form.requestSubmit(); // Gửi form
         });
 
@@ -108,9 +108,9 @@ document.querySelectorAll('.form_status').forEach(form => {
 });
 </script> -->
 
-<div class="container mt-4">
-    <h4 class="mb-3">Quản lý tài khoản</h4>
-    <div class="table-responsive">
+<div class="admin-book account-manager">    
+    <div class="center">
+        <h2>Quản lý tài khoản</h2>
         <table class="table table-bordered table-hover text-center align-middle">
             <tr>
             <th>Username</th>
@@ -129,25 +129,25 @@ document.querySelectorAll('.form_status').forEach(form => {
                     $img_src = $trang_thai == 1 ? 'img/dau_tich.png' : 'img/dau_x.png';
                     $img_user = $row['QUYEN'] == 1 ? 'img/user.png' : 'img/admin.png';
                     echo '<tr>';
-					echo '<td data-label="Username">'.$row['USERNAME'].'</td>';
+                    echo '<td data-label="Username">'.$row['USERNAME'].'</td>';
                     echo '<td data-label="Tên tài khoản">'.$row['TENTAIKHOAN'].'</td>';					                   
                     echo '<td data-label="Quyền">';
-						echo '<form method="POST" action="admin/change_role.php" class="form_role">';
-							echo '<input type="hidden" name="username" value="'.$row['USERNAME'].'">';
-							echo '<select name="quyen">';
-							$quyen_options = [1 => 'admin', 2 => 'user'];
-							foreach ($quyen_options as $value => $label) {
-								$selected = ($row['QUYEN'] == $value) ? 'selected' : '';
-								echo "<option value='$value' $selected>$label</option>";
-							}
-							echo '</select>';
-						// Nút để cập nhật quyền
-                    	echo '<button type="submit">Cập nhật quyền</button>';
-						echo '</form>';
+                        echo '<form method="POST" action="admin/change_role.php" class="form_role">';
+                            echo '<input type="hidden" name="username" value="'.$row['USERNAME'].'">';
+                            echo '<select name="quyen">';
+                            $quyen_options = [1 => 'admin', 2 => 'user'];  // 1 là value, 'admin' là label
+                            foreach ($quyen_options as $value => $label) {
+                                $selected = ($row['QUYEN'] == $value) ? 'selected' : '';
+                                echo "<option value='$value' $selected>$label</option>";
+                            }
+                            echo '</select>';
+                        // Nút để cập nhật quyền
+                        echo '<button type="submit">Cập nhật quyền</button>';
+                        echo '</form>';
                     echo '</td>';
-					
-					echo '<form method="POST" action="admin/update_status.php" class="form_status">';
-					echo '<input type="hidden" name="username" value="'.$row['USERNAME'].'">';
+                    
+                    echo '<form method="POST" action="admin/update_status.php" class="form_status">';
+                    echo '<input type="hidden" name="username" value="'.$row['USERNAME'].'">';
                     echo '<td data-label="Trạng thái">
                             <input 
                                 type="image" 
@@ -157,7 +157,7 @@ document.querySelectorAll('.form_status').forEach(form => {
                                 name="submit_status" 
                                 style="cursor: pointer;"
                             >
-                          </td>';
+                        </td>';
                     echo '<td data-label="Ngày tạo">'.$row['NGAYTAO'].'</td>';                    
                     echo '</form>';
                     echo '</tr>';
