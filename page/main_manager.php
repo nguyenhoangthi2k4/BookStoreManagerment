@@ -23,7 +23,7 @@
                     </button>
                     <div class="collapse" id="dashboard-collapse">
                         <ul class="btn-toggle-nav list-unstyled">
-                            <li><a href="#" class="link-dark rounded">Đơn hàng</a></li>
+                            <li><a href="index.php?do=statistical" class="link-dark rounded">Thống kê</a></li>
                             <li><a href="#" class="link-dark rounded">Đơn đã giao</a></li>
                             <li><a href="#" class="link-dark rounded">Tổng đơn hàng</a></li>
                         </ul>
@@ -77,6 +77,9 @@
                     break;
                 case 'account_manager':
                     include "admin/account_manager.php";
+                    break;
+                case 'statistical':
+                    include "admin/statistical.php";
                     break;
                 default:
                     include "admin/add_book.php";
