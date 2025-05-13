@@ -46,8 +46,8 @@
                     </button>
                     <div class="collapse" id="account-collapse">
                         <ul class="btn-toggle-nav list-unstyled">
-                            <li><a href="#" class="link-dark rounded">Thông tin tài khoản </a></li>
-                            <li><a href="index.php?do=logout" class="link-dark rounded">Thoát tài khoản</a></li>
+                            <li><a href="index.php?do=account_manager" class="link-dark rounded">Quản lý tài khoản </a></li>
+                            <!--<li><a href="index.php?do=logout" class="link-dark rounded">Thoát tài khoản</a></li>-->
                         </ul>
                     </div>
                 </li>
@@ -74,6 +74,9 @@
                     break;
                 case 'restore':
                     include "admin/restore.php";
+                    break;
+                case 'account_manager':
+                    include "admin/account_manager.php";
                     break;
                 default:
                     include "admin/add_book.php";
