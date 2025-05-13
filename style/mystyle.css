@@ -150,15 +150,34 @@ body {
     color: #ef2c2c;
 }
 
-.cart a {
-    margin: 0 20px;
-    color: #333;
-    transition: color 0.3s;
+.dropdown {
+    position: relative;
 }
 
-.cart a:hover {
-    color: #ef2c2c;
+.dropdown .dropdown-content {
+    list-style-type: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    border-radius: 5px;
+    display: none;
 }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.dropdown .dropdown-content li {
+    padding: 5px 10px;
+}
+
 
 /* === Popup Login === */
 .popup-overlay {
