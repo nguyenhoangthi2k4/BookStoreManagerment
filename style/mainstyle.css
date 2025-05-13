@@ -366,3 +366,55 @@
   cursor: pointer;
   border-radius: 6px;
 }
+
+/*==========drop lựa chọn profile hay xem lịch sử giao dịch============*/
+.menu-user {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px; 
+}
+
+.menu-user li {
+    position: relative;
+    padding: 10px;
+}
+
+.menu-user li a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 12px;
+    display: block;
+    white-space: nowrap; 
+}
+
+.menu-user .dropdown-content {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.menu-user .dropdown-content li a {
+    padding: 10px;
+    color: #333;
+}
+.menu-user .dropdown-content li a:hover {
+    color: #fa2525;
+}
+
+.menu-user .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.menu-user .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}

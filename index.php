@@ -34,6 +34,8 @@
             include "page/main_manager.php";
         } elseif ($action == 'register') {
             include "main/register.php";
+        } elseif ($action == 'change_password') {
+            include "main/change_password.php";
         } elseif (!empty($id)) {
             include "page/detail_book.php";
         } else {
