@@ -110,61 +110,59 @@ document.querySelectorAll('.form_status').forEach(form => {
 
 <div class="admin-book account-manager">    
     <div class="center">
-		<div class="card">
-			<h2>Quản lý tài khoản</h2>
-			<table class="table table-bordered table-hover text-center align-middle">
-				<tr>
-				<th>Username</th>
-				<th>Tên tài khoản</th>
-				<th>Quyền hạn</th>
-				<th>Trạng thái</th>
-				<th>Ngày tạo</th>
-				</tr>
-				<?php
-					include_once("dbprocess.php");
-					$sql = 'SELECT * FROM ACCOUNT';
-					$lst_acc = executeResults($sql);
-					foreach($lst_acc as $row)
-					{
-						$trang_thai = $row['KHOA_TK'];
-						$img_src = $trang_thai == 1 ? 'img/dau_tich.png' : 'img/dau_x.png';
-						$img_user = $row['QUYEN'] == 1 ? 'img/user.png' : 'img/admin.png';
-						echo '<tr>';
-						echo '<td data-label="Username">'.$row['USERNAME'].'</td>';
-						echo '<td data-label="Tên tài khoản">'.$row['TENTAIKHOAN'].'</td>';					                   
-						echo '<td data-label="Quyền">';
-							echo '<form method="POST" action="admin/change_role.php" class="form_role">';
-								echo '<input type="hidden" name="username" value="'.$row['USERNAME'].'">';
-								echo '<select name="quyen">';
-								$quyen_options = [1 => 'admin', 2 => 'user'];  // 1 là value, 'admin' là label
-								foreach ($quyen_options as $value => $label) {
-									$selected = ($row['QUYEN'] == $value) ? 'selected' : '';
-									echo "<option value='$value' $selected>$label</option>";
-								}
-								echo '</select>';
-							// Nút để cập nhật quyền
-							echo '<button type="submit">Cập nhật quyền</button>';
-							echo '</form>';
-						echo '</td>';
-						
-						echo '<form method="POST" action="admin/update_status.php" class="form_status">';
-						echo '<input type="hidden" name="username" value="'.$row['USERNAME'].'">';
-						echo '<td data-label="Trạng thái">
-								<input 
-									type="image" 
-									src="'.$img_src.'" 
-									alt="Trạng thái" 
-									width="24" 
-									name="submit_status" 
-									style="cursor: pointer;"
-								>
-							</td>';
-						echo '<td data-label="Ngày tạo">'.$row['NGAYTAO'].'</td>';                    
-						echo '</form>';
-						echo '</tr>';
-					}
-				?>
-			</table>
-		</div>		
+        <h2>Quản lý tài khoản</h2>
+        <table class="table table-bordered table-hover text-center align-middle">
+            <tr>
+            <th>Username</th>
+            <th>Tên tài khoản</th>
+            <th>Quyền hạn</th>
+            <th>Trạng thái</th>
+            <th>Ngày tạo</th>
+            </tr>
+            <?php
+                include_once("dbprocess.php");
+                $sql = 'SELECT * FROM ACCOUNT';
+                $lst_acc = executeResults($sql);
+                foreach($lst_acc as $row)
+                {
+                    $trang_thai = $row['KHOA_TK'];
+                    $img_src = $trang_thai == 1 ? 'img/dau_tich.png' : 'img/dau_x.png';
+                    $img_user = $row['QUYEN'] == 1 ? 'img/user.png' : 'img/admin.png';
+                    echo '<tr>';
+                    echo '<td data-label="Username">'.$row['USERNAME'].'</td>';
+                    echo '<td data-label="Tên tài khoản">'.$row['TENTAIKHOAN'].'</td>';					                   
+                    echo '<td data-label="Quyền">';
+                        echo '<form method="POST" action="admin/change_role.php" class="form_role">';
+                            echo '<input type="hidden" name="username" value="'.$row['USERNAME'].'">';
+                            echo '<select name="quyen">';
+                            $quyen_options = [1 => 'admin', 2 => 'user'];  // 1 là value, 'admin' là label
+                            foreach ($quyen_options as $value => $label) {
+                                $selected = ($row['QUYEN'] == $value) ? 'selected' : '';
+                                echo "<option value='$value' $selected>$label</option>";
+                            }
+                            echo '</select>';
+                        // Nút để cập nhật quyền
+                        echo '<button type="submit">Cập nhật quyền</button>';
+                        echo '</form>';
+                    echo '</td>';
+                    
+                    echo '<form method="POST" action="admin/update_status.php" class="form_status">';
+                    echo '<input type="hidden" name="username" value="'.$row['USERNAME'].'">';
+                    echo '<td data-label="Trạng thái">
+                            <input 
+                                type="image" 
+                                src="'.$img_src.'" 
+                                alt="Trạng thái" 
+                                width="24" 
+                                name="submit_status" 
+                                style="cursor: pointer;"
+                            >
+                        </td>';
+                    echo '<td data-label="Ngày tạo">'.$row['NGAYTAO'].'</td>';                    
+                    echo '</form>';
+                    echo '</tr>';
+                }
+            ?>
+        </table>
     </div>
 </div>

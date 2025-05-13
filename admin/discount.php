@@ -1,6 +1,5 @@
 <div class="admin-book discount">
     <div class="center">
-        <div class="card">
         <h2>Cập nhật khuyến mãi</h2>
         <form class="form-grid">
             <label>Chọn sách:
@@ -21,6 +20,5 @@
             <button type="submit">Lưu khuyến mãi</button>
             <button type="submit">💾Lưu</button>
         </form>
-        </div>
     </div>
 </div>
