@@ -75,6 +75,9 @@
                 case 'restore':
                     include "admin/restore.php";
                     break;
+                case 'account_manager':
+                    include "admin/account_manager.php";
+                    break;
                 default:
                     include "admin/add_book.php";
                     break;
