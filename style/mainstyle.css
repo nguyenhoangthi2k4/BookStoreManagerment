@@ -380,6 +380,11 @@
   margin: 20px;
 }
 
+.admin-book p {
+  font-size: 20px;
+  text-align: center;
+}
+
 .admin-book form label {
   font-size: 18px;
   font-weight: bold;
@@ -402,7 +407,7 @@
   margin: 20px;
 }
 
-.admin-book form .btn-container button {
+.admin-book form button {
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
@@ -414,14 +419,6 @@
 .add-book form{
   width: 100%;
 }
-
-
-
-
-
-
-
-
 
 /*==============history===============*/
 .transaction-history {
@@ -447,7 +444,6 @@ table {
 table th{
   background-color: #3094ff;
 }
-
 
 th, td {
   padding: 12px;
