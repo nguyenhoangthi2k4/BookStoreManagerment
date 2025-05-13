@@ -9,15 +9,16 @@
             <th>Hạng</th>
             <th>Tên sách</th>
             <th>Số lượng đã bán</th>
+            <th>Số lượng tồn kho</th>
         </tr>
         </thead>
         <tbody>
         <?php
         include_once("dbprocess.php");
-        $sql_top5 = 'SELECT S.TENSACH, SUM(CT.SOLUONGMUA) AS TONGSL 
+        $sql_top5 = 'SELECT S.TENSACH, S.SOLUONGTON, SUM(CT.SOLUONGMUA) AS TONGSL 
                         FROM SACH S 
                         JOIN CTHOADON CT ON S.MASACH = CT.MASACH 
-                        GROUP BY S.MASACH, S.TENSACH 
+                        GROUP BY S.MASACH, S.TENSACH, S.SOLUONGTON 
                         ORDER BY TONGSL DESC 
                         LIMIT 5';
         $topBooks = executeResults($sql_top5);
@@ -27,6 +28,7 @@
             echo '<td>'.$rank++.'</td>';
             echo '<td>'.$top['TENSACH'].'</td>';
             echo '<td>'.$top['TONGSL'].'</td>';
+            echo '<td>'.$top['SOLUONGTON'].'</td>';
             echo '</tr>';
         }
         ?>
@@ -41,14 +43,15 @@
             <th>Mã sách</th>
             <th>Tên sách</th>
             <th>Số lượng đã bán</th>
+            <th>Số lượng tồn kho</th>
         </tr>
         </thead>
         <tbody>
         <?php
-        $sql = 'SELECT S.MASACH, S.TENSACH, SUM(CT.SOLUONGMUA) AS TONGSL 
+        $sql = 'SELECT S.MASACH, S.SOLUONGTON,  S.TENSACH, SUM(CT.SOLUONGMUA) AS TONGSL 
                 FROM SACH S 
                 JOIN CTHOADON CT ON S.MASACH = CT.MASACH 
-                GROUP BY S.MASACH, S.TENSACH 
+                GROUP BY S.MASACH, S.TENSACH, S.SOLUONGTON 
                 ORDER BY TONGSL DESC';
         $books = executeResults($sql);
         foreach ($books as $book) {
@@ -56,6 +59,7 @@
             echo '<td>'.$book['MASACH'].'</td>';
             echo '<td>'.$book['TENSACH'].'</td>';
             echo '<td>'.$book['TONGSL'].'</td>';
+            echo '<td>'.$book['SOLUONGTON'].'</td>';
             echo '</tr>';
         }
         ?>
