@@ -5,24 +5,23 @@ include_once("../dbprocess.php");
 // Nhận dữ liệu từ form
 $username = $_POST['username'];
 
-    // Lấy trạng thái hiện tại
+    // Lấy quyền hiện tại
 $sql = "SELECT * FROM ACCOUNT WHERE USERNAME = '$username'";
 $result = executePreparedSingleResult($sql);
 
 if ($result != null) {
-    $current = $result['KHOA_TK'];
-    $newStatus = $current == 1 ? 0 : 1;
+    $current = $result['QUYEN'];
+    $newRole = $current == 1 ? 2 : 1;
 
-    // Cập nhật trạng thái
-    $update_sql = "UPDATE ACCOUNT SET KHOA_TK = $newStatus WHERE USERNAME = '$username'";
+    // Cập nhật quyền
+    $update_sql = "UPDATE ACCOUNT SET QUYEN = $newRole WHERE USERNAME = '$username'";
     execute($update_sql);
 
-    echo $newStatus;
+    echo $newRole;
 } 
-else { echo -1;
+else { echo -2;
 }
 
-echo '<script>alert("Cập nhật trạng thái thành công");</script>';
+echo '<script>alert("Cập nhật quyền thành công");</script>';
 echo '<script>window.location.href = "../index.php?do=account_manager";</script>';
-
 ?>
