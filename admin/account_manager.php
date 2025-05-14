@@ -16,7 +16,7 @@
                 alert('Lỗi không xác định');
             } else {
                 const newStatus = parseInt(data);
-                const newSrc = newStatus == 1 ? 'img/dau_tich.png' : 'img/dau_x.png';
+                const newSrc = newStatus == 0 ? 'img/dau_tich.png' : 'img/dau_x.png';
                 img.src = newSrc;
             }
         });
@@ -126,7 +126,7 @@ document.querySelectorAll('.form_status').forEach(form => {
                 foreach($lst_acc as $row)
                 {
                     $trang_thai = $row['KHOA_TK'];
-                    $img_src = $trang_thai == 1 ? 'img/dau_tich.png' : 'img/dau_x.png';
+                    $img_src = $trang_thai == 0 ? 'img/dau_tich.png' : 'img/dau_x.png';
                     $img_user = $row['QUYEN'] == 1 ? 'img/user.png' : 'img/admin.png';
                     echo '<tr>';
                     echo '<td data-label="Username">'.$row['USERNAME'].'</td>';

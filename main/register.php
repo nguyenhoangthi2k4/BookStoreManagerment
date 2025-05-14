@@ -7,6 +7,28 @@
 <body>
     <div class="modal-content-register">
     <h1>Đăng kí tài khoản</h1>
+    <?php
+        if(isset($_GET["error"])){
+            $error = $_GET["error"];
+            switch($error){
+                case "confirm":
+                    echo '<script>alert("Password không trùng khớp");</script>';
+                    break;
+                case 'missing':
+                    echo '<script>alert("Dữ liệu không được để trống");</script>';
+                    break;
+                case 'phone':
+                    echo '<script>alert("Số điện thoại không hợp lệ");</script>';
+                    break;
+                case 'email':
+                    echo '<script>alert("Email không hợp lệ");</script>';
+                    break;
+                case 'exists':
+                    echo '<script>alert("Tên đăng nhập đã tồn tại");</script>';
+                    break;
+                }
+        }
+    ?>
     <form action="main/process_register.php" method="POST" class="register-form">
         <div class="input-box-register">
             <label for="hoten">Họ tên</label>
