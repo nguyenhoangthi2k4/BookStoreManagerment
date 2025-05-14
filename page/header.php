@@ -16,8 +16,8 @@
         <ul class="menu">
             <li><a href="index.php">Trang chủ</a></li>
             <li><a href="#">Giới thiệu</a></li>
-            <li><a href="#">Tin tức</a></li>
-            <li><a href="#">Liên hệ</a></li>          
+            <li><a href="https://vnexpress.net/giai-tri/sach/diem-sach" target ="_bank">Tin tức</a></li>
+            <li><a href="lienhe.html" target="_bank">Liên hệ</a></li>          
         </ul>
     </div>
 

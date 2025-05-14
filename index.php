@@ -43,7 +43,6 @@
         } else {
             include "page/main_user.php";
         }
-
         ?>
     </main>
 
