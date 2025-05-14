@@ -12,8 +12,8 @@
                             <li><a href="index.php?do=add_book" class="link-dark rounded">Nhập sách</a></li>
                             <!-- <li><a href="#" class="link-dark rounded">Kho sách</a></li> -->
                             <li><a href="index.php?do=update_book" class="link-dark rounded">Cập nhật</a></li>
-                            <li><a href="index.php?do=discount" class="link-dark rounded">Khuyến mãi</a></li>
-                            <li><a href="#" class="link-dark rounded">Nhà cung cấp</a></li>
+                            <li><a href="index.php?do=noaction" class="link-dark rounded">Khuyến mãi</a></li>
+                            <li><a href="index.php?do=noaction" class="link-dark rounded">Nhà cung cấp</a></li>
                         </ul>
                     </div>
                 </li>
@@ -24,8 +24,8 @@
                     <div class="collapse" id="dashboard-collapse">
                         <ul class="btn-toggle-nav list-unstyled">
                             <li><a href="index.php?do=statistical" class="link-dark rounded">Thống kê</a></li>
-                            <li><a href="#" class="link-dark rounded">Đơn đã giao</a></li>
-                            <li><a href="#" class="link-dark rounded">Tổng đơn hàng</a></li>
+                            <li><a href="index.php?do=noaction" class="link-dark rounded">Đơn đã giao</a></li>
+                            <li><a href="index.php?do=noaction" class="link-dark rounded">Tổng đơn hàng</a></li>
                         </ul>
                     </div>
                 </li>  
@@ -66,14 +66,14 @@
                 case 'update_book':
                     include "admin/update_book.php";
                     break;
-                case 'discount':
-                    include "admin/discount.php";
-                    break; 
                 case 'backup':
                     include "admin/backup.php";
                     break;
                 case 'restore':
                     include "admin/restore.php";
+                    break;
+                case 'noaction':
+                    include "admin/noaction.php";
                     break;
                 case 'account_manager':
                     include "admin/account_manager.php";
