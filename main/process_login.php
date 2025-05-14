@@ -17,12 +17,20 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
     // Nếu tài khoản tồn tại và mật khẩu đúng
     if ($account && password_verify($password, $account['PASSWORD'])) {
-        $_SESSION['username'] = $account['USERNAME'];
-        $_SESSION['quyen'] = $account['QUYEN'];
-        $_SESSION['user_id'] = $account['MAKHACHHANG'];
-
-        header("Location: ../index.php");
-        exit();
+        if ($account['KHOA_TK'] == 0) {
+            $_SESSION['username'] = $account['USERNAME'];
+            $_SESSION['quyen'] = $account['QUYEN'];
+            $_SESSION['user_id'] = $account['MAKHACHHANG'];
+            
+            header("Location: ../index.php");
+            exit();
+        } else{
+            echo "<script>
+                alert('Tài khoản của bạn đã bị khóa!');
+                window.location.href = '../index.php';
+                </script>";
+            exit();
+        }
     } else {
         echo "<script>
                 alert('Sai tên đăng nhập hoặc mật khẩu!');
