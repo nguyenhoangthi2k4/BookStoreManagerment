@@ -4,9 +4,9 @@
 	<p>Nhấn nút bên dưới để tạo bản sao lưu toàn bộ dữ liệu sách, đơn hàng, người dùng.</p>
 	<form class="form-grid" action="admin/process_backup.php" method="post" enctype="multipart/form-data">
 		<div class="btn-container">
-				<button type="submit">Tiến hành sao lưu</button>
-				<div id="result"></div>
-			</div> 			
+			<button type="submit">Tiến hành sao lưu</button>				
+		</div> 
+		<div id="result"></div>			
 	</form>
 
 	<script>

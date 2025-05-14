@@ -37,29 +37,26 @@
     </table>
 
     <!-- Thống kê tất cả sách bán được -->
-    <p>Tổng số lượng sách đã bán</p>
+    <p>Tổng số lượng sách</p>
     <table>
         <thead>
         <tr>
             <th>Mã sách</th>
             <th>Tên sách</th>
-            <th>Số lượng đã bán</th>
+            <th>Giá gốc</th>
             <th>Số lượng tồn kho</th>
         </tr>
         </thead>
         <tbody>
         <?php
-        $sql = 'SELECT S.MASACH, S.SOLUONGTON,  S.TENSACH, SUM(CT.SOLUONGMUA) AS TONGSL 
-                FROM SACH S 
-                JOIN CTHOADON CT ON S.MASACH = CT.MASACH 
-                GROUP BY S.MASACH, S.TENSACH, S.SOLUONGTON 
-                ORDER BY TONGSL DESC';
+        $sql = 'SELECT *
+                FROM SACH S';
         $books = executeResults($sql);
         foreach ($books as $book) {
             echo '<tr>';
             echo '<td>'.$book['MASACH'].'</td>';
             echo '<td>'.$book['TENSACH'].'</td>';
-            echo '<td>'.$book['TONGSL'].'</td>';
+            echo '<td>'.$book['GIAGOC'].'</td>';
             echo '<td>'.$book['SOLUONGTON'].'</td>';
             echo '</tr>';
         }

@@ -408,7 +408,7 @@ table th{
 }
 
 tr:nth-child(even) {
-  background-color: #626161;
+  background-color: #cecaca;
 } 
 
 th, td {

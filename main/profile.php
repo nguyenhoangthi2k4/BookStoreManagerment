@@ -59,12 +59,12 @@ if (!$user) {
 
             <div class="form-group gender-group">
                 <label>Giới tính</label>
-                <label><input type="radio" name="gioitinh" value="0" <?php echo ($user['GIOITINH'] == 0) ? 'checked' : ''; ?>> Nữ</label>
-                <label><input type="radio" name="gioitinh" value="1" <?php echo ($user['GIOITINH'] == 1) ? 'checked' : ''; ?>> Nam</label>
+                <label><input type="radio" name="gioitinh" value="0" checked=<?php echo ($user['GIOITINH'] == 0) ? 'checked' : ''; ?>> Nữ</label>
+                <label><input type="radio" name="gioitinh" value="1" checked=<?php echo ($user['GIOITINH'] == 1) ? 'checked' : ''; ?>> Nam</label>
             </div>
 
             <div class="submit-button">
-                <button type="submit">💾 Lưu thay đổi</button>
+                <button type="submit">Lưu thay đổi</button>
             </div>
         </form>
     </div>

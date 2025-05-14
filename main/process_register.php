@@ -12,6 +12,7 @@
 		$address = trim($_POST["address"] ?? '');
 		$birthday = $_POST["ngaysinh"] ?? '';
 		$gender = $_POST["gioitinh"] ?? '';
+		$date = $_POST["ngaysinh"] ?? '';
 		$role = 2; // Quyền mặc định: Khách hàng
 
 		if ($username && $password && $password_confirm && $email && $name && $phone && $address && $birthday && $gender !== '') {
@@ -45,7 +46,7 @@
 			$sqlAcc = 'INSERT INTO ACCOUNT (USERNAME, PASSWORD, TENTAIKHOAN, QUYEN) VALUES ("'.$username.'","'.$hashedPassword.'","'.$name.'","'.$role.'")';
             execute($sqlAcc);
 			// Thêm vào KHACHHANG
-			$sqlKH = 'INSERT INTO KHACHHANG (TENKHACHHANG, DIACHI, SDT, USERNAME, EMAIL) VALUES ("'.$name.'","'.$address.'","'.$phone.'","'.$username.'","'.$email.'")';
+			$sqlKH = 'INSERT INTO KHACHHANG (TENKHACHHANG, DIACHI, SDT, USERNAME, EMAIL, NGAYSINH) VALUES ("'.$name.'","'.$address.'","'.$phone.'","'.$username.'","'.$email.'", "'.$date.'")';
             execute($sqlKH);
 			header("Location: ../index.php");
 			exit();

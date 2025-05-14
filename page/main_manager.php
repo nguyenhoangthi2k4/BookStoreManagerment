@@ -19,7 +19,7 @@
                 </li>
                 <li class="mb-1">
                     <button class="btn btn-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-                    Thống kế
+                    Thống kê
                     </button>
                     <div class="collapse" id="dashboard-collapse">
                         <ul class="btn-toggle-nav list-unstyled">

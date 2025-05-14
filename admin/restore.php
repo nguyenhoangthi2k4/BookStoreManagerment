@@ -7,10 +7,9 @@
             <input type="file" name="backup_file" accept=".sql" required>
         </lable>
         <div class="btn-container">
-            <button type="submit">Phục hồi</button>
-        <div id="result"></div>
+            <button type="submit">Phục hồi</button>        
         </div> 
-        
+        <div id="result"></div>
     </form>
 
     <script>
